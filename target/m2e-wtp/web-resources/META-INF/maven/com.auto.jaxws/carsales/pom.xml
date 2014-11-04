@@ -61,8 +61,8 @@
 							<manifestEntries>
 								<Implementation-Version>${project.version}
 								</Implementation-Version>
-								<Implementation-Title>${artifactId}</Implementation-Title>
-								<Extension-Name>${artifactId}</Extension-Name>
+								<Implementation-Title>${project.artifactId}</Implementation-Title>
+								<Extension-Name>${project.artifactId}</Extension-Name>
 								<Built-By>furkanzumrut.com</Built-By>
 							</manifestEntries>
 						</archive>
