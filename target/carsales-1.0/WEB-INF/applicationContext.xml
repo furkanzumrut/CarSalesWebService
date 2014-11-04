@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<!-- activates annotations (@Service, @Component, @Autowired) -->
+	<context:component-scan base-package="com.auto.jaxws.cxf.ws" />
+	<context:component-scan base-package="com.auto.jaxws.cxf.dao.impl" />
+	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+    <tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager" />
+	<!-- publish the web service -->
+	<!-- <jaxws:endpoint id="teamService" implementor="com.danielme.demo.jaxws.cxf.ws.TeamServiceImpl" 
+		address="/v/1/teamService" /> -->
+    <bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    		
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+
+		<property name="mappingResources">
+			<list>
+				<value>com/auto/jaxws/cxf/model/Auto.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autocategory.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autofuel.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autogear.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autoimages.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autointerrior.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autorim.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autosubcategory.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autotire.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Customer.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Soldcars.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+<!-- 				<prop key="hibernate.current_session_context_class">thread</prop> -->
+				<prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+				 
+			</props>
+		</property>
+
+	</bean>
+
+
+	<bean id="autoDao" class="com.auto.jaxws.cxf.dao.impl.AutoDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="autoService" class="com.auto.jaxws.cxf.ws.AutoService">
+		<property name="autoDao" ref="autoDao" />
+	</bean>
+
+
+
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://carsalesdb.ckbwbgfnwxca.eu-west-1.rds.amazonaws.com:5432/carsalesdb" />
+		<property name="username" value="awuser" />
+		<property name="password" value="fz199300" />
+
+	</bean>
+
+	<!-- references a spring bean -->
+	<!-- <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->
+
+
+<!--  WHEN YOU WANT TO MAKE SURE COMMENT ALL SERVICES -->
+	<jaxws:endpoint id="autoServiceWS" implementor="#autoService"
+		address="/v/1/autoService" />
+<!--  WHEN YOU WANT TO RUN TEST MAKE SURE COMMENT ALL SERVICES -->
+
+</beans>

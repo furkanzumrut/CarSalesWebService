@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: carsales
+Implementation-Version: 1.0
+Built-By: furkanzumrut.com
+Extension-Name: carsales
+Build-Jdk: 1.8.0_25
+Created-By: Maven Integration for Eclipse
+

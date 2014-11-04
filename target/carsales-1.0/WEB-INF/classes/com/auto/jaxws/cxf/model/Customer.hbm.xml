@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 12, 2014 11:01:48 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.auto.jaxws.cxf.model.Customer" table="customer" schema="public">
+        <id name="customerid" type="int">
+            <column name="customerid" />
+            <generator class="increment" />
+        </id>
+        <property name="customername" type="string">
+            <column name="customername" />
+        </property>
+        <property name="customerphone" type="java.lang.Integer">
+            <column name="customerphone" />
+        </property>
+        <property name="customergender" type="java.lang.Integer">
+            <column name="customergender" />
+        </property>
+        <property name="customeradress" type="string">
+            <column name="customeradress" />
+        </property>
+        <property name="customerregisterdate" type="date">
+            <column name="customerregisterdate" length="13" />
+        </property>
+        <set name="soldcarses" table="soldcars" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customerid" />
+            </key>
+            <one-to-many class="com.auto.jaxws.cxf.model.Soldcars" />
+        </set>
+    </class>
+</hibernate-mapping>
