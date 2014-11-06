@@ -84,7 +84,7 @@
 	<bean id="jsonProvider" 
 		class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
 	
-  	<jaxrs:server id="autoServiceREST" address="/rest/AutoService">
+  	<jaxrs:server id="autoServiceREST" address="/v/1/rest/AutoService">
   		<jaxrs:serviceBeans>
   			<ref bean="autoService"/>
   		</jaxrs:serviceBeans>
@@ -93,7 +93,7 @@
 		</jaxrs:providers>
   	</jaxrs:server>
 	<jaxws:endpoint id="autoServiceWS" implementor="#autoService"
-		address="/v/1/autoService" />
+		address="/v/1/soap/autoService" />
 <!--  WHEN YOU WANT TO RUN TEST MAKE SURE COMMENT ALL SERVICES -->
 
 </beans>
