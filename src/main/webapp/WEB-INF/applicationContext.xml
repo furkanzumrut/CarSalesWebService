@@ -92,9 +92,8 @@
 			<ref bean='jsonProvider' />
 		</jaxrs:providers>
   	</jaxrs:server>
-<!--   	http://54.72.196.42:8080/carsales-1.0/ws/v/1/rest/AutoService?_wadl -->
 	<jaxws:endpoint id="autoServiceWS" implementor="#autoService"
-		address="http://54.72.196.42/carsales-1.0/ws/v/1/soap/autoService" />
+		address="/v/1/soap/autoService" />
 <!--  WHEN YOU WANT TO RUN TEST MAKE SURE COMMENT ALL SERVICES -->
 
 </beans>
