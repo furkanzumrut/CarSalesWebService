@@ -22,7 +22,10 @@
 		</layout>
 
 	</appender>
-
+	<logger name="org.hibernate">
+		<level value="ALL" />
+		<appender-ref ref="FILE" />
+	</logger>
 	<root>
 		<priority value="debug" />
 		<appender-ref ref="console" />
