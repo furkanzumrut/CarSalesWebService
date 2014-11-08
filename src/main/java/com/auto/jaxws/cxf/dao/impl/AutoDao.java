@@ -2,6 +2,7 @@ package com.auto.jaxws.cxf.dao.impl;
 import java.util.List;
 
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -72,9 +73,15 @@ public class AutoDao implements IAutoDao{
 		Session session = getSessionFactory().getCurrentSession();
 		//Session session = getSessionFactory().openSession();
 		session.beginTransaction();
-		Criteria criteria = session.createCriteria(Auto.class).add(Restrictions.eq("autoid", id));
+		
+		//USING THIS
+		//Criteria criteria = session.createCriteria(Auto.class).add(Restrictions.eq("autoid", id));
+		//***
+		Query query = session.createQuery("from Auto where autoid = :id ");
+		query.setParameter("id", id);
+		Auto auto = (Auto) query.list().get(0);
 		//criteria.add(Restrictions.eq("autoid", id));
-		Auto auto = (Auto) criteria.list().get(0);
+		//Auto auto = (Auto) criteria.list().get(0);
 		
 		session.getTransaction().commit();
 		
