@@ -94,6 +94,10 @@
 			<id>public</id>
 			<url>http://maven.nuxeo.org/nexus/content/repositories/public</url>
 		</repository>
+		<repository>
+			<id>JBoss repository</id>
+			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -130,7 +134,12 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>3.5.0-Final</version>
 		</dependency>
-
+		<!-- Hibernate c3p0 connection pool -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>3.6.3.Final</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
@@ -173,7 +182,7 @@
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
 			<version>${cxf.version}</version>
-		</dependency> 
+		</dependency>
 		<!-- CXF DEPENDENCIES -->
 		<dependency>
 			<groupId>junit</groupId>

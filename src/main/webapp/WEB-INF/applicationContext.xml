@@ -50,6 +50,11 @@
 <!-- 				<prop key="hibernate.current_session_context_class">thread</prop> -->
 				<prop key="hibernate.enable_lazy_load_no_trans">true</prop>
 				 <prop key="hibernate.show_sql">true</prop>
+				  <prop key="hibernate.c3p0.min_size">5</prop>
+				  <prop key="hibernate.c3p0.max_size">20</prop>
+				  <prop key="hibernate.c3p0.timeout">300</prop>
+				  <prop key="hibernate.c3p0.max_statements">50</prop>
+				  <prop key="hibernate.c3p0.idle_test_period">3000</prop>
 			</props>
 		</property>
 
