@@ -39,9 +39,11 @@ public interface IAutoService {
 	
 	public List<Autocategory> getAllAutoCategory();
 	
-	@GET
-	@Path("/getAutoById/{autoid}")
-	public Auto getAuto(@PathParam("autoid") String autoid);
+//	@GET
+//	@Path("/getAutoById/{autoid}")
+//	public Auto getAuto(@PathParam("autoid") String autoid);
+//	
+	public Auto getAuto(String autoid);
 	
 	@GET
 	@Path("/get/{id}")
