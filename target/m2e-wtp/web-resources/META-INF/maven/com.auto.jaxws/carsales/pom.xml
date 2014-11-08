@@ -183,18 +183,6 @@
 			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
 			<version>${cxf.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.codehaus.woodstox</groupId>
-			<artifactId>stax2-api</artifactId>
-			<version>3.1.4</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.codehaus.woodstox</groupId>
-			<artifactId>woodstox-core-asl</artifactId>
-			<version>4.4.1</version>
-		</dependency>
-
 		<!-- CXF DEPENDENCIES -->
 		<dependency>
 			<groupId>junit</groupId>
