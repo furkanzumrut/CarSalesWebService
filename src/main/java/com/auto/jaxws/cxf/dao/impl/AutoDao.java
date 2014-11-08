@@ -77,9 +77,11 @@ public class AutoDao implements IAutoDao{
 		//USING THIS
 		//Criteria criteria = session.createCriteria(Auto.class).add(Restrictions.eq("autoid", id));
 		//***
-		Query query = session.createQuery("from Auto where autoid = :id ");
-		query.setParameter("id", id);
-		Auto auto = (Auto) query.list().get(0);
+		//Query query = session.createQuery("from Auto where autoid = :id ");
+		
+		//query.setParameter("id", id);
+		//Auto auto = (Auto) query.list().get(0);
+		Auto auto = (Auto) session.get(Auto.class, id);
 		//criteria.add(Restrictions.eq("autoid", id));
 		//Auto auto = (Auto) criteria.list().get(0);
 		
