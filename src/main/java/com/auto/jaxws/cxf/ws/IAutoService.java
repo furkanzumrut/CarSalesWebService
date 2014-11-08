@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.jws.WebService;
 
-
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.Autocategory;
 
@@ -15,11 +14,14 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+
+import org.apache.cxf.annotations.GZIP;
 /**
  * 
  * @author furkanzumrut.com
  *
  */
+@GZIP
 @WebService
 @Consumes("application/json")
 @Produces("application/json")
