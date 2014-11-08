@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 12, 2014 11:01:48 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.auto.jaxws.cxf.model.Autocategory" table="autocategory" schema="public">
+        <id name="categoryid" type="int">
+            <column name="categoryid" />
+            <generator class="increment" />
+        </id>
+        <property name="categoryname" type="string">
+            <column name="categoryname" />
+        </property>
+        <set name="autos" table="auto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="autocategoryid" />
+            </key>
+            <one-to-many class="com.auto.jaxws.cxf.model.Auto" />
+        </set>
+    </class>
+</hibernate-mapping>
