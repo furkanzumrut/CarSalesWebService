@@ -4,6 +4,7 @@
 <!-- Generated Oct 12, 2014 11:01:48 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="com.auto.jaxws.cxf.model.Autocategory" table="autocategory" schema="public">
+    <cache usage="read-write"/>
         <id name="categoryid" type="int">
             <column name="categoryid" />
             <generator class="increment" />

@@ -4,6 +4,7 @@
 <!-- Generated Oct 12, 2014 11:01:48 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="com.auto.jaxws.cxf.model.Auto" table="auto" schema="public">
+    <cache usage="read-write"/>
         <id name="autoid" type="int">
             <column name="autoid" />
             <generator class="increment" />

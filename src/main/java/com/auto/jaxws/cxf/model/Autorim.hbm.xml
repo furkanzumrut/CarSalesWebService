@@ -4,6 +4,7 @@
 <!-- Generated Oct 12, 2014 11:01:48 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="com.auto.jaxws.cxf.model.Autorim" table="autorim" schema="public">
+    <cache usage="read-write"/>
         <id name="autorimid" type="int">
             <column name="autorimid" />
             <generator class="increment" />
