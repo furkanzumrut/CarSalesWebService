@@ -1,6 +1,10 @@
 <!doctype html>
 <html ng-app>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 <title>Hello AngularJS</title>
 <link rel="stylesheet" type="text/css"
 	href="http://angular-ui.github.com/ng-grid/css/ng-grid.css" />
@@ -12,13 +16,29 @@
 	src="http://angular-ui.github.com/ng-grid/lib/ng-grid.debug.js"></script>
 <script src="app.js"></script>
 </head>
+<body>
 
 
 <div ng-controller="Hello">
-	<!-- 			<p>The ID is {{greeting.autoid}}</p> -->
-	<!-- 			<p>The ID is {{greeting.autoname}}</p> -->
+	<table data-role="table" id="table-1" class="ui-responsive">
+		<thead>
+			<tr>
+				<th>A</th>
+				<th data-priority="1">B</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>The ID is {{greeting.autoid}}</td>
+				<td>The ID is {{greeting.autoname}}</td>
+			</tr>
+		</tbody>
+	</table>
+				<p>The ID is {{greeting.autoid}}</p>
+				<p>The ID is {{greeting.autoname}}</p>
 	<h1>Web Service</h1>
 </div>
 
 
+</body>
 </html>
