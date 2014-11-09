@@ -84,9 +84,9 @@
 				<prop key="hibernate.c3p0.timeout">300</prop>
 				<prop key="hibernate.c3p0.max_statements">50</prop>
 				<prop key="hibernate.c3p0.idle_test_period">3000</prop>
-<!-- 				<prop key="hibernate.cache.use_second_level_cache">true</prop> -->
-<!-- 				<prop key="hibernate.cache.use_query_cache">true</prop> -->
-<!-- 				<prop key="hibernate.cache.provider_class">net.sf.ehcache.hibernate.SingletonEhCacheProvider</prop> -->
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.provider_class">net.sf.ehcache.hibernate.SingletonEhCacheProvider</prop>
 			</props>
 
 		</property>
