@@ -87,6 +87,7 @@
 				<prop key="hibernate.cache.use_second_level_cache">true</prop>
 				<prop key="hibernate.cache.use_query_cache">true</prop>
 				<prop key="hibernate.cache.provider_class">net.sf.ehcache.hibernate.SingletonEhCacheProvider</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
 			</props>
 
 		</property>
