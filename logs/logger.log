@@ -4257,3 +4257,94 @@ Classes known to this context:
 11-10-2014 12:47:27,326 AM DEBUG SessionFactoryUtils:789 - Closing Hibernate Session
 11-10-2014 12:47:27,326 AM TRACE SessionImpl:310 - closing session
 11-10-2014 12:47:27,326 AM TRACE ConnectionManager:398 - connection already null in cleanup : no action
+11-10-2014 12:50:08,079 AM DEBUG OpenSessionInViewFilter:239 - Using SessionFactory 'sessionFactory' for OpenSessionInViewFilter
+11-10-2014 12:50:08,080 AM DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+11-10-2014 12:50:08,080 AM DEBUG OpenSessionInViewFilter:181 - Opening single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:08,080 AM DEBUG SessionFactoryUtils:316 - Opening Hibernate Session
+11-10-2014 12:50:08,080 AM DEBUG SessionImpl:257 - opened session at timestamp: 5798188679495680
+11-10-2014 12:50:08,080 AM TRACE SessionImpl:1426 - setting flush mode to: MANUAL
+11-10-2014 12:50:08,081 AM DEBUG TransactionSynchronizationManager:192 - Bound value [org.springframework.orm.hibernate3.SessionHolder@964f5e8] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] to thread [http-8080-2]
+11-10-2014 12:50:08,082 AM DEBUG TransactionSynchronizationManager:242 - Removed value [org.springframework.orm.hibernate3.SessionHolder@964f5e8] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] from thread [http-8080-2]
+11-10-2014 12:50:08,082 AM DEBUG OpenSessionInViewFilter:207 - Closing single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:08,082 AM DEBUG SessionFactoryUtils:789 - Closing Hibernate Session
+11-10-2014 12:50:08,082 AM TRACE SessionImpl:310 - closing session
+11-10-2014 12:50:08,082 AM TRACE ConnectionManager:398 - connection already null in cleanup : no action
+11-10-2014 12:50:08,175 AM DEBUG OpenSessionInViewFilter:239 - Using SessionFactory 'sessionFactory' for OpenSessionInViewFilter
+11-10-2014 12:50:08,175 AM DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+11-10-2014 12:50:08,175 AM DEBUG OpenSessionInViewFilter:181 - Opening single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:08,175 AM DEBUG SessionFactoryUtils:316 - Opening Hibernate Session
+11-10-2014 12:50:08,176 AM DEBUG SessionImpl:257 - opened session at timestamp: 5798188679888896
+11-10-2014 12:50:08,176 AM TRACE SessionImpl:1426 - setting flush mode to: MANUAL
+11-10-2014 12:50:08,176 AM DEBUG TransactionSynchronizationManager:192 - Bound value [org.springframework.orm.hibernate3.SessionHolder@48ee6743] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] to thread [http-8080-2]
+11-10-2014 12:50:08,176 AM DEBUG TransactionSynchronizationManager:242 - Removed value [org.springframework.orm.hibernate3.SessionHolder@48ee6743] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] from thread [http-8080-2]
+11-10-2014 12:50:08,176 AM DEBUG OpenSessionInViewFilter:207 - Closing single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:08,177 AM DEBUG SessionFactoryUtils:789 - Closing Hibernate Session
+11-10-2014 12:50:08,177 AM TRACE SessionImpl:310 - closing session
+11-10-2014 12:50:08,177 AM TRACE ConnectionManager:398 - connection already null in cleanup : no action
+11-10-2014 12:50:13,286 AM DEBUG OpenSessionInViewFilter:239 - Using SessionFactory 'sessionFactory' for OpenSessionInViewFilter
+11-10-2014 12:50:13,286 AM DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+11-10-2014 12:50:13,286 AM DEBUG OpenSessionInViewFilter:181 - Opening single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:13,287 AM DEBUG SessionFactoryUtils:316 - Opening Hibernate Session
+11-10-2014 12:50:13,287 AM DEBUG SessionImpl:257 - opened session at timestamp: 5798188700823552
+11-10-2014 12:50:13,287 AM TRACE SessionImpl:1426 - setting flush mode to: MANUAL
+11-10-2014 12:50:13,287 AM DEBUG TransactionSynchronizationManager:192 - Bound value [org.springframework.orm.hibernate3.SessionHolder@376e4125] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] to thread [http-8080-4]
+11-10-2014 12:50:13,287 AM DEBUG TransactionSynchronizationManager:242 - Removed value [org.springframework.orm.hibernate3.SessionHolder@376e4125] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] from thread [http-8080-4]
+11-10-2014 12:50:13,288 AM DEBUG OpenSessionInViewFilter:207 - Closing single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:13,288 AM DEBUG SessionFactoryUtils:789 - Closing Hibernate Session
+11-10-2014 12:50:13,288 AM TRACE SessionImpl:310 - closing session
+11-10-2014 12:50:13,288 AM TRACE ConnectionManager:398 - connection already null in cleanup : no action
+11-10-2014 12:50:13,376 AM DEBUG OpenSessionInViewFilter:239 - Using SessionFactory 'sessionFactory' for OpenSessionInViewFilter
+11-10-2014 12:50:13,376 AM DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+11-10-2014 12:50:13,376 AM DEBUG OpenSessionInViewFilter:181 - Opening single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:13,376 AM DEBUG SessionFactoryUtils:316 - Opening Hibernate Session
+11-10-2014 12:50:13,377 AM DEBUG SessionImpl:257 - opened session at timestamp: 5798188701192192
+11-10-2014 12:50:13,377 AM TRACE SessionImpl:1426 - setting flush mode to: MANUAL
+11-10-2014 12:50:13,377 AM DEBUG TransactionSynchronizationManager:192 - Bound value [org.springframework.orm.hibernate3.SessionHolder@75c643d4] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] to thread [http-8080-4]
+11-10-2014 12:50:13,377 AM DEBUG TransactionSynchronizationManager:242 - Removed value [org.springframework.orm.hibernate3.SessionHolder@75c643d4] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] from thread [http-8080-4]
+11-10-2014 12:50:13,378 AM DEBUG OpenSessionInViewFilter:207 - Closing single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:13,378 AM DEBUG SessionFactoryUtils:789 - Closing Hibernate Session
+11-10-2014 12:50:13,378 AM TRACE SessionImpl:310 - closing session
+11-10-2014 12:50:13,378 AM TRACE ConnectionManager:398 - connection already null in cleanup : no action
+11-10-2014 12:50:23,614 AM DEBUG OpenSessionInViewFilter:239 - Using SessionFactory 'sessionFactory' for OpenSessionInViewFilter
+11-10-2014 12:50:23,614 AM DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+11-10-2014 12:50:23,614 AM DEBUG OpenSessionInViewFilter:181 - Opening single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:23,614 AM DEBUG SessionFactoryUtils:316 - Opening Hibernate Session
+11-10-2014 12:50:23,615 AM DEBUG SessionImpl:257 - opened session at timestamp: 5798188743122944
+11-10-2014 12:50:23,615 AM TRACE SessionImpl:1426 - setting flush mode to: MANUAL
+11-10-2014 12:50:23,615 AM DEBUG TransactionSynchronizationManager:192 - Bound value [org.springframework.orm.hibernate3.SessionHolder@4db9c8c3] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] to thread [http-8080-3]
+11-10-2014 12:50:23,615 AM DEBUG TransactionSynchronizationManager:242 - Removed value [org.springframework.orm.hibernate3.SessionHolder@4db9c8c3] for key [org.hibernate.impl.SessionFactoryImpl@52f63068] from thread [http-8080-3]
+11-10-2014 12:50:23,615 AM DEBUG OpenSessionInViewFilter:207 - Closing single Hibernate Session in OpenSessionInViewFilter
+11-10-2014 12:50:23,616 AM DEBUG SessionFactoryUtils:789 - Closing Hibernate Session
+11-10-2014 12:50:23,616 AM TRACE SessionImpl:310 - closing session
+11-10-2014 12:50:23,616 AM TRACE ConnectionManager:398 - connection already null in cleanup : no action
+11-10-2014 10:22:13,553 PM  INFO XmlWebApplicationContext:1042 - Closing Root WebApplicationContext: startup date [Mon Nov 10 00:41:35 EET 2014]; root of context hierarchy
+11-10-2014 10:22:13,557 PM DEBUG XmlWebApplicationContext:332 - Publishing event in Root WebApplicationContext: org.springframework.context.event.ContextClosedEvent[source=Root WebApplicationContext: startup date [Mon Nov 10 00:41:35 EET 2014]; root of context hierarchy]
+11-10-2014 10:22:13,561 PM DEBUG ServerImpl:153 - Server is stopping.
+11-10-2014 10:22:13,564 PM DEBUG ServletDestination:57 - unregistering incoming observer: org.apache.cxf.transport.ChainInitiationObserver@3f5c583e
+11-10-2014 10:22:13,564 PM DEBUG ServerImpl:176 - unregister the server to serverRegistry 
+11-10-2014 10:22:13,564 PM DEBUG ServerImpl:153 - Server is stopping.
+11-10-2014 10:22:13,565 PM DEBUG ServletDestination:57 - unregistering incoming observer: org.apache.cxf.transport.ChainInitiationObserver@420cd195
+11-10-2014 10:22:13,565 PM DEBUG ServerImpl:176 - unregister the server to serverRegistry 
+11-10-2014 10:22:13,573 PM DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'lifecycleProcessor'
+11-10-2014 10:22:13,574 PM  INFO DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@49bd27a7: defining beans [autoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,autoDao,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,cacheManager,transactionManager,org.springframework.beans.factory.config.MethodInvokingFactoryBean#0,sessionFactory,dataSource,jsonProvider,autoServiceREST,autoServiceWS,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11-10-2014 10:22:13,589 PM DEBUG DisposableBeanAdapter:302 - Invoking destroy method 'stop' on bean with name 'autoServiceWS'
+11-10-2014 10:22:13,590 PM DEBUG ServerImpl:176 - unregister the server to serverRegistry 
+11-10-2014 10:22:13,592 PM DEBUG DisposableBeanAdapter:302 - Invoking destroy method 'destroy' on bean with name 'autoServiceREST'
+11-10-2014 10:22:13,593 PM DEBUG DefaultListableBeanFactory:500 - Retrieved dependent beans for bean 'org.springframework.beans.factory.config.MethodInvokingFactoryBean#69aebd29': [org.springframework.beans.factory.config.MethodInvokingFactoryBean#0]
+11-10-2014 10:22:13,594 PM DEBUG DefaultListableBeanFactory:500 - Retrieved dependent beans for bean 'org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean#3014411c': [cacheManager]
+11-10-2014 10:22:13,594 PM DEBUG DisposableBeanAdapter:226 - Invoking destroy() on bean with name 'sessionFactory'
+11-10-2014 10:22:13,595 PM  INFO LocalSessionFactoryBean:246 - Closing Hibernate SessionFactory
+11-10-2014 10:22:13,595 PM  INFO SessionFactoryImpl:935 - closing
+11-10-2014 10:22:13,597 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Soldcars.data
+11-10-2014 10:22:13,598 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autogear.data
+11-10-2014 10:22:13,599 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autointerrior.data
+11-10-2014 10:22:13,599 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autotire.data
+11-10-2014 10:22:13,599 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Auto.data
+11-10-2014 10:22:13,600 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autosubcategory.data
+11-10-2014 10:22:13,600 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Customer.data
+11-10-2014 10:22:13,601 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autofuel.data
+11-10-2014 10:22:13,602 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autoimages.data
+11-10-2014 10:22:13,602 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autocategory.data
+11-10-2014 10:22:13,603 PM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autorim.data
+11-10-2014 10:22:13,605 PM DEBUG DiskStore:602 - Deleting file org.hibernate.cache.StandardQueryCache.data
+11-10-2014 10:22:13,606 PM DEBUG DiskStore:602 - Deleting file org.hibernate.cache.UpdateTimestampsCache.data
