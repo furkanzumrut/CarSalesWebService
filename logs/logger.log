@@ -24663,34 +24663,3 @@ Classes known to this context:
 11-12-2014 03:19:48,175 AM TRACE JDBCContext:242 - after transaction completion
 11-12-2014 03:19:48,176 AM DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
 11-12-2014 03:19:48,176 AM TRACE SessionImpl:592 - after transaction completion
-11-12-2014 03:25:00,693 AM  INFO XmlWebApplicationContext:1042 - Closing Root WebApplicationContext: startup date [Wed Nov 12 03:19:38 EET 2014]; root of context hierarchy
-11-12-2014 03:25:00,694 AM DEBUG XmlWebApplicationContext:332 - Publishing event in Root WebApplicationContext: org.springframework.context.event.ContextClosedEvent[source=Root WebApplicationContext: startup date [Wed Nov 12 03:19:38 EET 2014]; root of context hierarchy]
-11-12-2014 03:25:00,694 AM DEBUG ServerImpl:153 - Server is stopping.
-11-12-2014 03:25:00,695 AM DEBUG ServletDestination:57 - unregistering incoming observer: org.apache.cxf.transport.ChainInitiationObserver@1cc8416a
-11-12-2014 03:25:00,695 AM DEBUG ServerImpl:176 - unregister the server to serverRegistry 
-11-12-2014 03:25:00,695 AM DEBUG ServerImpl:153 - Server is stopping.
-11-12-2014 03:25:00,696 AM DEBUG ServletDestination:57 - unregistering incoming observer: org.apache.cxf.transport.ChainInitiationObserver@72a8361b
-11-12-2014 03:25:00,696 AM DEBUG ServerImpl:176 - unregister the server to serverRegistry 
-11-12-2014 03:25:00,698 AM DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'lifecycleProcessor'
-11-12-2014 03:25:00,698 AM  INFO DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@43f61afb: defining beans [autoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,autoDao,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,cacheManager,transactionManager,org.springframework.beans.factory.config.MethodInvokingFactoryBean#0,sessionFactory,dataSource,jsonProvider,autoServiceREST,autoServiceWS,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
-11-12-2014 03:25:00,703 AM DEBUG DisposableBeanAdapter:302 - Invoking destroy method 'stop' on bean with name 'autoServiceWS'
-11-12-2014 03:25:00,703 AM DEBUG ServerImpl:176 - unregister the server to serverRegistry 
-11-12-2014 03:25:00,704 AM DEBUG DisposableBeanAdapter:302 - Invoking destroy method 'destroy' on bean with name 'autoServiceREST'
-11-12-2014 03:25:00,705 AM DEBUG DefaultListableBeanFactory:500 - Retrieved dependent beans for bean 'org.springframework.beans.factory.config.MethodInvokingFactoryBean#134c370e': [org.springframework.beans.factory.config.MethodInvokingFactoryBean#0]
-11-12-2014 03:25:00,705 AM DEBUG DefaultListableBeanFactory:500 - Retrieved dependent beans for bean 'org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean#6c1832aa': [cacheManager]
-11-12-2014 03:25:00,705 AM DEBUG DisposableBeanAdapter:226 - Invoking destroy() on bean with name 'sessionFactory'
-11-12-2014 03:25:00,706 AM  INFO LocalSessionFactoryBean:246 - Closing Hibernate SessionFactory
-11-12-2014 03:25:00,706 AM  INFO SessionFactoryImpl:935 - closing
-11-12-2014 03:25:00,708 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autofuel.data
-11-12-2014 03:25:00,710 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autoimages.data
-11-12-2014 03:25:00,711 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Customer.data
-11-12-2014 03:25:00,713 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autosubcategory.data
-11-12-2014 03:25:00,715 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autogear.data
-11-12-2014 03:25:00,716 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autocategory.data
-11-12-2014 03:25:00,718 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autointerrior.data
-11-12-2014 03:25:00,719 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autotire.data
-11-12-2014 03:25:00,720 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Auto.data
-11-12-2014 03:25:00,722 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Soldcars.data
-11-12-2014 03:25:00,722 AM DEBUG DiskStore:602 - Deleting file com.auto.jaxws.cxf.model.Autorim.data
-11-12-2014 03:25:00,724 AM DEBUG DiskStore:602 - Deleting file org.hibernate.cache.StandardQueryCache.data
-11-12-2014 03:25:00,725 AM DEBUG DiskStore:602 - Deleting file org.hibernate.cache.UpdateTimestampsCache.data
