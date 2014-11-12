@@ -32,6 +32,8 @@ public class AutoDao implements IAutoDao{
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
+	
+
 
 	@Override
 	@Transactional

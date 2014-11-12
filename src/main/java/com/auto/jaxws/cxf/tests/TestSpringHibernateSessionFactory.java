@@ -31,20 +31,19 @@ public class TestSpringHibernateSessionFactory {
 		
 
 		AutoService autoService = (AutoService) ctx.getBean("autoService");
-		List <Autocategory> liste = new ArrayList<Autocategory>();
-		List <Auto> arabalar = new ArrayList<Auto>();
+		Auto araba = new Auto();
+		
 		
 		//auto.setCarid(2);
 		try{
 		
 			//autoService.getAuto(1);
-			 liste = autoService.getAllAutoCategory();
-			 arabalar = autoService.getAllAutos();
+			 araba = autoService.getAuto("16");
 		}catch (JDBCException jdbce) {
 		    jdbce.getSQLException().getNextException().printStackTrace();
 		}
-		System.out.println(liste.get(0).getCategoryname());
-		System.out.println(arabalar.get(0).getAutoname());
+		System.out.println(araba.getAutoname());
+		System.out.println(araba.getAutofuel().getAutofuelname());
 		
 		 
 		System.out.println("************** ENDING PROGRAM *****************");

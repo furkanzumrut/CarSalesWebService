@@ -1,5 +1,8 @@
 package com.auto.jaxws.cxf.model;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonManagedReference;
+
 // Generated Oct 12, 2014 11:01:48 PM by Hibernate Tools 3.4.0.CR1
 
 /**
@@ -12,7 +15,11 @@ public class Soldcars implements java.io.Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private int soldcarid;
+	
+	@JsonManagedReference
 	private Customer customer;
+	
+	@JsonManagedReference
 	private Auto auto;
 
 	public Soldcars() {

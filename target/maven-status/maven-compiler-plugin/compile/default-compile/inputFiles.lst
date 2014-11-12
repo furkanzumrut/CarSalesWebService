@@ -4,6 +4,7 @@
 /Users/furkanzumrut/EclipseProjects/CarSalesWebService/src/main/java/com/auto/jaxws/cxf/dao/IAutoDao.java
 /Users/furkanzumrut/EclipseProjects/CarSalesWebService/src/main/java/com/auto/jaxws/cxf/tests/AutoServiceTests.java
 /Users/furkanzumrut/EclipseProjects/CarSalesWebService/src/main/java/com/auto/jaxws/cxf/model/Autosubcategory.java
+/Users/furkanzumrut/EclipseProjects/CarSalesWebService/src/main/java/com/auto/jaxws/cxf/dao/impl/TestDao.java
 /Users/furkanzumrut/EclipseProjects/CarSalesWebService/src/main/java/com/auto/jaxws/cxf/tests/TestSpringHibernateSessionFactory.java
 /Users/furkanzumrut/EclipseProjects/CarSalesWebService/src/main/java/com/auto/jaxws/cxf/model/Autogear.java
 /Users/furkanzumrut/EclipseProjects/CarSalesWebService/src/main/java/com/auto/jaxws/cxf/model/Autocategory.java

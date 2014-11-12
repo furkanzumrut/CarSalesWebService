@@ -117,6 +117,8 @@
 
 	</bean>
 
+
+	
 	<!-- references a spring bean -->
 	<!-- <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->
 

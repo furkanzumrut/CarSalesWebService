@@ -2,6 +2,7 @@ package com.auto.jaxws.cxf.ws;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlTransient;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
