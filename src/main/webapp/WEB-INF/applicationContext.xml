@@ -60,17 +60,17 @@
 
 		<property name="mappingResources">
 			<list>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Auto.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Autocategory.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Autofuel.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Autogear.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Autoimages.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Autointerrior.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Autorim.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Autosubcategory.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Autotire.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Customer.hbm.xml</value>
-				<value>src/main/java/com/auto/jaxws/cxf/model/Soldcars.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Auto.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autocategory.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autofuel.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autogear.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autoimages.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autointerrior.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autorim.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autosubcategory.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autotire.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Customer.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Soldcars.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
