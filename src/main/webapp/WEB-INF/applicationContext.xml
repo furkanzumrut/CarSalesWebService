@@ -120,7 +120,7 @@
 
 	
 	<!-- references a spring bean -->
-	<!-- <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->
+	<!--  <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->
 
 
 	<!-- WHEN YOU WANT TO MAKE SURE COMMENT ALL SERVICES -->
