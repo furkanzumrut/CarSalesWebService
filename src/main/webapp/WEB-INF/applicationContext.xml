@@ -14,7 +14,6 @@
 	<!-- activates annotations (@Service, @Component, @Autowired) -->
 	<context:component-scan base-package="com.auto.jaxws.cxf.ws" />
 	<context:component-scan base-package="com.auto.jaxws.cxf.dao.impl" />
-	<context:component-scan base-package="com.auto.jaxws.cxf.model" />
 	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
 	<tx:annotation-driven proxy-target-class="true"
 		transaction-manager="transactionManager" />
@@ -56,23 +55,22 @@
 	</bean>
 
 	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 
-		<property name="annotatedClasses">
+		<property name="mappingResources">
 			<list>
-				<value>com.auto.jaxws.cxf.model.Auto</value>
-				<value>com.auto.jaxws.cxf.model.Autocategory</value>
-				<value>com.auto.jaxws.cxf.model.Autofuel</value>
-				<value>com.auto.jaxws.cxf.model.Autogear</value>
-				<value>com.auto.jaxws.cxf.model.Autoimages</value>
-				<value>com.auto.jaxws.cxf.model.Autointerrior</value>
-				<value>com.auto.jaxws.cxf.model.Autoproperties</value>
-				<value>com.auto.jaxws.cxf.model.Autorim</value>
-				<value>com.auto.jaxws.cxf.model.Autosubcategory</value>
-				<value>com.auto.jaxws.cxf.model.Autotire</value>
-				<value>com.auto.jaxws.cxf.model.Customer</value>
-				<value>com.auto.jaxws.cxf.model.Soldcars</value>
+				<value>com/auto/jaxws/cxf/model/Auto.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autocategory.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autofuel.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autogear.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autoimages.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autointerrior.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autorim.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autosubcategory.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Autotire.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Customer.hbm.xml</value>
+				<value>com/auto/jaxws/cxf/model/Soldcars.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -120,9 +118,9 @@
 	</bean>
 
 
-
+	
 	<!-- references a spring bean -->
-	<!-- <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->
+	<!--   <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->
 
 
 	<!-- WHEN YOU WANT TO MAKE SURE COMMENT ALL SERVICES -->
