@@ -135,8 +135,8 @@
 
 	<!-- WHEN YOU WANT TO MAKE SURE COMMENT ALL SERVICES -->
 
-	<jaxws:endpoint id="autoServiceWS" implementor="com.auto.jaxws.cxf.ws.IAutoService"
-		address="http://54.72.196.42/carsales-1.0/ws/v/1/soap/autoService" />
+	<jaxws:endpoint id="autoServiceWS" implementor="#autoService"
+		address="/v/1/soap/autoService" />
 	<!-- WHEN YOU WANT TO RUN TEST MAKE SURE COMMENT ALL SERVICES -->
 
 </beans>
