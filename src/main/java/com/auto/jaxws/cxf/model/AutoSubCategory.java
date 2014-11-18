@@ -16,7 +16,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "autosubcategory", catalog = "carsalesdb", schema = "public")
@@ -26,7 +25,6 @@ public class AutoSubCategory implements Serializable {
 	private String subcategoryname;
 
 	private AutoCategory autocategory;
-	@Transient
 	private Set<Auto> autos = new HashSet<Auto>(0);
 
 	protected AutoSubCategory() {

@@ -14,7 +14,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "autotire", catalog = "carsalesdb", schema = "public")
@@ -22,7 +21,6 @@ public class AutoTire implements Serializable {
 
 	private Integer autotireid;
 	private String autotirename;
-	@Transient
 	private Set<Auto> autos = new HashSet<Auto>(0);
 
 	protected AutoTire() {

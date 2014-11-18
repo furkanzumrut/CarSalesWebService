@@ -14,7 +14,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 
 @Entity
@@ -23,7 +22,6 @@ public class AutoInterrior implements Serializable  {
 
 	private Integer autointerriorid;
 	private String autointerriorname;
-	@Transient
 	private Set<Auto> autos = new HashSet<Auto>(0);
 	
 	protected AutoInterrior() {

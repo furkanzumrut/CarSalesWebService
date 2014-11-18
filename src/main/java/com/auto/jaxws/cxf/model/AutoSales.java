@@ -12,7 +12,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -23,7 +22,6 @@ import org.hibernate.annotations.Parameter;
 public class AutoSales  implements Serializable {
 	
 	private Integer autoid;
-	@Transient
 	private Auto auto;
 	private Customer customer;
 	private Integer sold;

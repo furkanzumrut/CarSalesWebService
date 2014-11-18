@@ -14,7 +14,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 
 @Entity
@@ -24,7 +23,6 @@ public class AutoGear  implements Serializable {
 
 	private Integer autogearid;
 	private String autogearname;
-	@Transient
 	private Set<Auto> autos = new HashSet<Auto>(0);
 	
 	protected AutoGear(){
