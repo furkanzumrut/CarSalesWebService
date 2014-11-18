@@ -22,7 +22,7 @@ import org.apache.cxf.annotations.GZIP;
  *
  */
 @GZIP
-@WebService
+@WebService(targetNamespace = "http://webservice.autoservice", name = "AutoServiceWS")
 public interface IAutoService {
 
 	public void addAuto(Auto auto);
