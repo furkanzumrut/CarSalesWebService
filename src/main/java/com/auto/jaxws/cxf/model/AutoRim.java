@@ -16,6 +16,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 @Table(name = "autorim", catalog = "carsalesdb", schema = "public")
 public class AutoRim implements Serializable {
@@ -66,6 +68,7 @@ public class AutoRim implements Serializable {
 		this.autorimname = autorimname;
 	}
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autorim")
+	@JsonIgnore
 	public Set<Auto> getAutos() {
 		return autos;
 	}

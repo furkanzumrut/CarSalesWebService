@@ -14,6 +14,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
@@ -58,6 +60,7 @@ public class AutoCategory implements Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autocategory")
+	@JsonIgnore
 	public Set<Auto> getAutos() {
 		return autos;
 	}

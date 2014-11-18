@@ -14,6 +14,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
@@ -71,6 +72,7 @@ public class AutoSales  implements Serializable {
 	}
 	@OneToOne(fetch = FetchType.LAZY)
 	@PrimaryKeyJoinColumn	
+	@JsonIgnore
 	public Auto getAuto() {
 		return auto;
 	}

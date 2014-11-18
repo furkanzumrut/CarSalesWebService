@@ -17,6 +17,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 @Table(name = "autosubcategory", catalog = "carsalesdb", schema = "public")
 public class AutoSubCategory implements Serializable {
@@ -75,6 +77,7 @@ public class AutoSubCategory implements Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "categoryid")
+	@JsonIgnore
 	public AutoCategory getAutocategory() {
 		return autocategory;
 	}
@@ -83,6 +86,7 @@ public class AutoSubCategory implements Serializable {
 		this.autocategory = autocategory;
 	}
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autosubcategory")
+	@JsonIgnore
 	public Set<Auto> getAutos() {
 		return autos;
 	}
