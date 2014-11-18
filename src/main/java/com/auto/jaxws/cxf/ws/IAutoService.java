@@ -25,14 +25,12 @@ import org.apache.cxf.annotations.GZIP;
 @WebService
 public interface IAutoService {
 
-
-
 	public void addAuto(Auto auto);
 
 	public List<Auto> getAllAutos();
 
-	public Auto getAuto(@PathParam("autoid") String autoid);
+	public Auto getAuto(Integer autoid);
 
-	public String getHome(@PathParam("id") String id);
+	public String getReturnWork();
 
 }

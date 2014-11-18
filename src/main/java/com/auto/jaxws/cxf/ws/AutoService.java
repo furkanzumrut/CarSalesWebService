@@ -39,17 +39,17 @@ public class AutoService implements IAutoService {
 	}
 
 	@Override
-	public Auto getAuto(String autoid) {
+	public Auto getAuto(Integer autoid) {
 		// TODO Auto-generated method stub
 
-		return autoDao.findById(Integer.parseInt(autoid));
+		return autoDao.findById(autoid);
 	}
 
 	@Override
-	public String getHome(String id) {
+	public String getReturnWork() {
 		// TODO Auto-generated method stub
 
-		return id;
+		return "It works!";
 	}
 
 }

@@ -45,7 +45,7 @@ public class TestSpringHibernateSessionFactory {
 		
 		// auto.setCarid(2);
 		
-		Auto auto = autoService.getAuto("1");
+		Auto auto = autoService.getAuto(1);
 		System.out.println(auto.getAutocategory().getCategoryname());
 			// autoService.getAuto(1);
 			
