@@ -58,7 +58,7 @@ public class AutoCategory implements Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autocategory")
-	public Set<Auto> getAutos() {
+	private Set<Auto> getAutos() {
 		return autos;
 	}
 

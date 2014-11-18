@@ -21,17 +21,17 @@ import org.hibernate.annotations.Parameter;
 
 @Entity
 @Table(name = "autosales", catalog = "carsalesdb", schema = "public")
-public class AutoSales  implements Serializable {
-	
+public class AutoSales implements Serializable {
+
 	private Integer autoid;
 	private Auto auto;
 	private Customer customer;
 	private Integer sold;
 
-	protected AutoSales(){
-		
+	protected AutoSales() {
+
 	}
-	
+
 	public AutoSales(Integer autoid) {
 		super();
 		this.autoid = autoid;
@@ -50,34 +50,40 @@ public class AutoSales  implements Serializable {
 	public Customer getCustomer() {
 		return customer;
 	}
+
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
+
 	@Column(name = "sold")
 	public Integer getSold() {
 		return sold;
 	}
+
 	public void setSold(Integer sold) {
 		this.sold = sold;
 	}
-	@GenericGenerator(name = "generator", strategy = "foreign", 
-	parameters = @Parameter(name = "property", value = "auto"))
+
+	@GenericGenerator(name = "generator", strategy = "foreign", parameters = @Parameter(name = "property", value = "auto"))
 	@Id
 	@GeneratedValue(generator = "generator")
-	@Column(name = "autoid", unique = true, nullable = false)	
+	@Column(name = "autoid", unique = true, nullable = false)
 	public Integer getAutoid() {
 		return autoid;
 	}
+
 	public void setAutoid(Integer autoid) {
 		this.autoid = autoid;
 	}
+
 	@OneToOne(fetch = FetchType.LAZY)
 	@PrimaryKeyJoinColumn
 	public Auto getAuto() {
 		return auto;
 	}
+
 	public void setAuto(Auto auto) {
 		this.auto = auto;
 	}
-	
+
 }

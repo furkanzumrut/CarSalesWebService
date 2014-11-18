@@ -27,8 +27,8 @@ public class HibernateUtil {
 		Session session = getSession();
 		session.beginTransaction();
 
-		Auto auto = (Auto) session.get(Auto.class, 4);
-		System.out.println(auto.getAutocategory().getCategoryname());
+		Auto auto = (Auto) session.get(Auto.class, 1);
+		System.out.println(auto.getAutocategory());
 		
 		session.getTransaction().commit();
 		session.close();
