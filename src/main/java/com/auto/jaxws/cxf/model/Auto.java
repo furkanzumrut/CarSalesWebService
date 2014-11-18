@@ -37,23 +37,26 @@ public class Auto implements Serializable {
 	private Date autoregisterdate;
 	private Integer autotype;
 	private Double autoprice;
-	// private AutoSales autosaless;
+	private AutoSales autosales;
 	private AutoCategory autocategory;
-
+	private AutoFuel autofuel;
+	private AutoGear autogear;
+	private AutoInterrior autointerrior;
+	private AutoRim autorim;
+	private AutoSubCategory autosubcategory;
+	private AutoTire autotire;
+	private Set<AutoImage> autoimages = new HashSet<AutoImage>(
+			0);
+	
 	protected Auto() {
 	}
 
-	public Auto(Integer autoid) {
+	
+	public Auto(String autoname, Integer automodel, Double auto100km,
+			Integer autocolor, Integer autokm, Integer autohp,
+			Integer autohand, Date autoregisterdate, Integer autotype,
+			Double autoprice) {
 		super();
-		this.autoid = autoid;
-	}
-
-	public Auto(Integer autoid, String autoname, Integer automodel,
-			Double auto100km, Integer autocolor, Integer autokm,
-			Integer autohp, Integer autohand, Date autoregisterdate,
-			Integer autotype, Double autoprice, AutoCategory autocategory) {
-		super();
-		this.autoid = autoid;
 		this.autoname = autoname;
 		this.automodel = automodel;
 		this.auto100km = auto100km;
@@ -64,11 +67,41 @@ public class Auto implements Serializable {
 		this.autoregisterdate = autoregisterdate;
 		this.autotype = autotype;
 		this.autoprice = autoprice;
-		this.autocategory = autocategory;
 	}
 
+
+	public Auto(String autoname, Integer automodel, Double auto100km,
+			Integer autocolor, Integer autokm, Integer autohp,
+			Integer autohand, Date autoregisterdate, Integer autotype,
+			Double autoprice, AutoSales autosales, AutoCategory autocategory,
+			AutoFuel autofuel, AutoGear autogear, AutoInterrior autointerrior,
+			AutoRim autorim, AutoSubCategory autosubcategory,
+			AutoTire autotire, Set<AutoImage> autoimages) {
+		super();
+		this.autoname = autoname;
+		this.automodel = automodel;
+		this.auto100km = auto100km;
+		this.autocolor = autocolor;
+		this.autokm = autokm;
+		this.autohp = autohp;
+		this.autohand = autohand;
+		this.autoregisterdate = autoregisterdate;
+		this.autotype = autotype;
+		this.autoprice = autoprice;
+		this.autosales = autosales;
+		this.autocategory = autocategory;
+		this.autofuel = autofuel;
+		this.autogear = autogear;
+		this.autointerrior = autointerrior;
+		this.autorim = autorim;
+		this.autosubcategory = autosubcategory;
+		this.autotire = autotire;
+		this.autoimages = autoimages;
+	}
+
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "autoid", unique = true, nullable = false)
 	public Integer getAutoid() {
 		return autoid;
@@ -169,16 +202,14 @@ public class Auto implements Serializable {
 		this.autoprice = autoprice;
 	}
 
-	// @OneToOne(fetch = FetchType.LAZY, mappedBy = "autosales", cascade =
-	// CascadeType.ALL)
-	// public AutoSales getAutosaless() {
-	// return autosaless;
-	// }
-	//
-	//
-	// public void setAutosaless(AutoSales autosaless) {
-	// this.autosaless = autosaless;
-	// }
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "auto", cascade = CascadeType.ALL)
+	public AutoSales getAutosales() {
+		return autosales;
+	}
+
+	public void setAutosales(AutoSales autosales) {
+		this.autosales = autosales;
+	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "categoryid", nullable = false)
@@ -188,6 +219,74 @@ public class Auto implements Serializable {
 
 	public void setAutocategory(AutoCategory autocategory) {
 		this.autocategory = autocategory;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "autofuelid", nullable = false)
+	public AutoFuel getAutofuel() {
+		return autofuel;
+	}
+
+	public void setAutofuel(AutoFuel autofuel) {
+		this.autofuel = autofuel;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "autogearid", nullable = false)
+	public AutoGear getAutogear() {
+		return autogear;
+	}
+
+	public void setAutogear(AutoGear autogear) {
+		this.autogear = autogear;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "autointerriorid", nullable = false)
+	public AutoInterrior getAutointerrior() {
+		return autointerrior;
+	}
+
+	public void setAutointerrior(AutoInterrior autointerrior) {
+		this.autointerrior = autointerrior;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "autorimid", nullable = false)
+	public AutoRim getAutorim() {
+		return autorim;
+	}
+
+	public void setAutorim(AutoRim autorim) {
+		this.autorim = autorim;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "subcategoryid", nullable = false)
+	public AutoSubCategory getAutosubcategory() {
+		return autosubcategory;
+	}
+
+	public void setAutosubcategory(AutoSubCategory autosubcategory) {
+		this.autosubcategory = autosubcategory;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "autotireid", nullable = false)
+	public AutoTire getAutotire() {
+		return autotire;
+	}
+
+	public void setAutotire(AutoTire autotire) {
+		this.autotire = autotire;
+	}
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "auto")
+	public Set<AutoImage> getAutoimages() {
+		return autoimages;
+	}
+
+	public void setAutoimages(Set<AutoImage> autoimages) {
+		this.autoimages = autoimages;
 	}
 
 }

@@ -3,12 +3,16 @@ package com.auto.jaxws.cxf.model;
 import static javax.persistence.GenerationType.IDENTITY;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -18,7 +22,8 @@ public class AutoGear  implements Serializable {
 	
 
 	private Integer autogearid;
-	private Integer autogearname;
+	private String autogearname;
+	private Set<Auto> autos = new HashSet<Auto>(0);
 	
 	protected AutoGear(){
 		
@@ -31,10 +36,18 @@ public class AutoGear  implements Serializable {
 	}
 
 
-	public AutoGear(Integer autogearid, Integer autogearname) {
+	public AutoGear(Integer autogearid, String autogearname) {
 		super();
 		this.autogearid = autogearid;
 		this.autogearname = autogearname;
+	}
+
+
+	public AutoGear(Integer autogearid, String autogearname, Set<Auto> autos) {
+		super();
+		this.autogearid = autogearid;
+		this.autogearname = autogearname;
+		this.autos = autos;
 	}
 
 
@@ -48,11 +61,21 @@ public class AutoGear  implements Serializable {
 		this.autogearid = autogearid;
 	}
 	@Column(name = "autogearname")
-	public Integer getAutogearname() {
+	public String getAutogearname() {
 		return autogearname;
 	}
-	public void setAutogearname(Integer autogearname) {
+	public void setAutogearname(String autogearname) {
 		this.autogearname = autogearname;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autogear")
+	public Set<Auto> getAutos() {
+		return autos;
+	}
+
+
+	public void setAutos(Set<Auto> autos) {
+		this.autos = autos;
 	}
 
 }

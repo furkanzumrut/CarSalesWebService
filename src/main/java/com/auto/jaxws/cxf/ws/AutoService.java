@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.auto.jaxws.cxf.dao.impl.AutoDao;
 import com.auto.jaxws.cxf.model.Auto;
-
 import com.auto.jaxws.cxf.utils.TokenChecker;
 /**
  * 
@@ -23,6 +22,8 @@ public class AutoService implements IAutoService {
 	private AutoDao autoDao;
 
 
+
+	
 	@Autowired
 	public void setAutoDao(AutoDao autoDao) {
 		this.autoDao = autoDao;
@@ -62,6 +63,7 @@ public class AutoService implements IAutoService {
 	@Override
 	public String getHome(String id) {
 		// TODO Auto-generated method stub
+		
 		return id;
 	}
 

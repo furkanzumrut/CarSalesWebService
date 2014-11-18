@@ -27,6 +27,7 @@ import org.apache.cxf.annotations.GZIP;
 @Produces("application/json")
 public interface IAutoService {
 
+
 	@POST
 	@Path("/addAuto")
 	public void addAutoWithToken(Auto auto, @HeaderParam("auth-token") String token, @HeaderParam("auth-user") String username, @HeaderParam("auth-password") String password);

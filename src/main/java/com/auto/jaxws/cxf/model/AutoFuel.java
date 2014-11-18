@@ -3,12 +3,16 @@ package com.auto.jaxws.cxf.model;
 import static javax.persistence.GenerationType.IDENTITY;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -18,11 +22,13 @@ public class AutoFuel implements Serializable  {
 
 	private Integer autofueldid;
 	private String autofuelname;
-	
+	private Set<Auto> autos = new HashSet<Auto>(0);
 	
 	protected AutoFuel() {
 	}
 	
+
+
 	public AutoFuel(Integer autofueldid) {
 		super();
 		this.autofueldid = autofueldid;
@@ -33,7 +39,12 @@ public class AutoFuel implements Serializable  {
 		this.autofueldid = autofueldid;
 		this.autofuelname = autofuelname;
 	}
-
+	public AutoFuel(Integer autofueldid, String autofuelname, Set<Auto> autos) {
+		super();
+		this.autofueldid = autofueldid;
+		this.autofuelname = autofuelname;
+		this.autos = autos;
+	}
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "autofuelid", unique = true, nullable = false)	
@@ -49,6 +60,14 @@ public class AutoFuel implements Serializable  {
 	}
 	public void setAutofuelname(String autofuelname) {
 		this.autofuelname = autofuelname;
+	}
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autofuel")
+	public Set<Auto> getAutos() {
+		return autos;
+	}
+
+	public void setAutos(Set<Auto> autos) {
+		this.autos = autos;
 	}
 
 }
