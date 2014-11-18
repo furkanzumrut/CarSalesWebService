@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.auto.jaxws.cxf.dao.impl.AutoDao;
 import com.auto.jaxws.cxf.model.Auto;
-import com.auto.jaxws.cxf.model.Autocategory;
+
 import com.auto.jaxws.cxf.utils.TokenChecker;
 /**
  * 
@@ -56,13 +56,6 @@ public class AutoService implements IAutoService {
 		return autoDao.findById(Integer.parseInt(autoid));
 	}
 
-
-
-	@Override
-	public List<Autocategory> getAllAutoCategory() {
-		// TODO Auto-generated method stub
-		return autoDao.selectAllAutoCategory();
-	}
 
 
 

@@ -5,7 +5,7 @@ import java.util.List;
 import javax.jws.WebService;
 
 import com.auto.jaxws.cxf.model.Auto;
-import com.auto.jaxws.cxf.model.Autocategory;
+
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -39,7 +39,7 @@ public interface IAutoService {
 	public void addAuto(Auto auto);
 	public List<Auto> getAllAutos();
 	
-	public List<Autocategory> getAllAutoCategory();
+
 	
 	@GET
 	@Path("/getAutoById/{autoid}")

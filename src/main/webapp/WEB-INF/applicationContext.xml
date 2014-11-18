@@ -14,6 +14,8 @@
 	<!-- activates annotations (@Service, @Component, @Autowired) -->
 	<context:component-scan base-package="com.auto.jaxws.cxf.ws" />
 	<context:component-scan base-package="com.auto.jaxws.cxf.dao.impl" />
+	<context:component-scan 
+		base-package="com.auto.jaxws.cxf.model" />
 	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
 	<tx:annotation-driven proxy-target-class="true"
 		transaction-manager="transactionManager" />
@@ -55,22 +57,21 @@
 	</bean>
 
 	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 
-		<property name="mappingResources">
+		<property name="annotatedClasses">
 			<list>
-				<value>Auto.hbm.xml</value>
-				<value>Autocategory.hbm.xml</value>
-				<value>Autofuel.hbm.xml</value>
-				<value>Autogear.hbm.xml</value>
-				<value>Autoimages.hbm.xml</value>
-				<value>Autointerrior.hbm.xml</value>
-				<value>Autorim.hbm.xml</value>
-				<value>Autosubcategory.hbm.xml</value>
-				<value>Autotire.hbm.xml</value>
-				<value>Customer.hbm.xml</value>
-				<value>Soldcars.hbm.xml</value>
+				<value>com.auto.jaxws.cxf.model.Auto</value>
+				<value>com.auto.jaxws.cxf.model.AutoCategory</value>
+				<value>com.auto.jaxws.cxf.model.AutoFuel</value>
+				<value>com.auto.jaxws.cxf.model.AutoGear</value>
+				<value>com.auto.jaxws.cxf.model.AutoInterrior</value>
+				<value>com.auto.jaxws.cxf.model.AutoRim</value>
+				<value>com.auto.jaxws.cxf.model.AutoSales</value>
+				<value>com.auto.jaxws.cxf.model.AutoSubCategory</value>
+				<value>com.auto.jaxws.cxf.model.AutoTire</value>
+				<value>com.auto.jaxws.cxf.model.Customer</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -78,7 +79,7 @@
 				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
 				<!-- <prop key="hibernate.current_session_context_class">thread</prop> -->
 				<prop key="hibernate.enable_lazy_load_no_trans">true</prop>
-				<prop key="hibernate.show_sql">true</prop>
+<!-- 				<prop key="hibernate.hbm2ddl.auto">create</prop> -->
 				<prop key="hibernate.c3p0.min_size">5</prop>
 				<prop key="hibernate.c3p0.max_size">10</prop>
 				<prop key="hibernate.c3p0.timeout">300</prop>
@@ -107,35 +108,43 @@
 
 
 
+<!-- 	<bean id="dataSource" -->
+<!-- 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+<!-- 		<property name="driverClassName" value="org.postgresql.Driver" /> -->
+<!-- 		<property name="url" -->
+<!-- 			value="jdbc:postgresql://carsalesdb.ckbwbgfnwxca.eu-west-1.rds.amazonaws.com:5432/carsalesdb" /> -->
+<!-- 		<property name="username" value="awuser" /> -->
+<!-- 		<property name="password" value="fz199300" /> -->
+
+<!-- 	</bean> -->
+
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url"
-			value="jdbc:postgresql://carsalesdb.ckbwbgfnwxca.eu-west-1.rds.amazonaws.com:5432/carsalesdb" />
-		<property name="username" value="awuser" />
-		<property name="password" value="fz199300" />
+			value="jdbc:postgresql://localhost:5432/carsalesdb" />
+		<property name="username" value="postgres" />
+		<property name="password" value="199300" />
 
 	</bean>
 
-
-	
 	<!-- references a spring bean -->
-	<!--   <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->
+	<!-- <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->
 
 
 	<!-- WHEN YOU WANT TO MAKE SURE COMMENT ALL SERVICES -->
-	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+<!-- 	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" /> -->
 
-	<jaxrs:server id="autoServiceREST" address="/v/1/rest/AutoService">
-		<jaxrs:serviceBeans>
-			<ref bean="autoService" />
-		</jaxrs:serviceBeans>
-		<jaxrs:providers>
-			<ref bean='jsonProvider' />
-		</jaxrs:providers>
-	</jaxrs:server>
-	<jaxws:endpoint id="autoServiceWS" implementor="#autoService"
-		address="/v/1/soap/autoService" />
+<!-- 	<jaxrs:server id="autoServiceREST" address="/v/1/rest/AutoService"> -->
+<!-- 		<jaxrs:serviceBeans> -->
+<!-- 			<ref bean="autoService" /> -->
+<!-- 		</jaxrs:serviceBeans> -->
+<!-- 		<jaxrs:providers> -->
+<!-- 			<ref bean='jsonProvider' /> -->
+<!-- 		</jaxrs:providers> -->
+<!-- 	</jaxrs:server> -->
+<!-- 	<jaxws:endpoint id="autoServiceWS" implementor="#autoService" -->
+<!-- 		address="/v/1/soap/autoService" /> -->
 	<!-- WHEN YOU WANT TO RUN TEST MAKE SURE COMMENT ALL SERVICES -->
 
 </beans>

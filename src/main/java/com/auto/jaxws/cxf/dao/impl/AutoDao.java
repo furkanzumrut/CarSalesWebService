@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.auto.jaxws.cxf.dao.IAutoDao;
 import com.auto.jaxws.cxf.model.Auto;
-import com.auto.jaxws.cxf.model.Autocategory;
+
 /**
  * 
  * @author furkanzumrut.com
@@ -57,17 +57,7 @@ public class AutoDao implements IAutoDao{
 		return persons;
 	}
 	
-	@Override
-	public List<Autocategory> selectAllAutoCategory() {
-		Session session = getSessionFactory().getCurrentSession();
-		session.beginTransaction();
-		Criteria criteria = session.createCriteria(Autocategory.class);
-		
-		@SuppressWarnings("unchecked")
-		List<Autocategory> persons = (List<Autocategory>) criteria.list();
-		session.getTransaction().commit();
-		return persons;
-	}
+
 	
 	@Override
 	public Auto findById(int id) {
@@ -84,6 +74,7 @@ public class AutoDao implements IAutoDao{
 		//query.setParameter("id", id);
 		//Auto auto = (Auto) query.list().get(0);
 		Auto auto = (Auto) session.get(Auto.class, id);
+		
 		//criteria.add(Restrictions.eq("autoid", id));
 		//Auto auto = (Auto) criteria.list().get(0);
 		

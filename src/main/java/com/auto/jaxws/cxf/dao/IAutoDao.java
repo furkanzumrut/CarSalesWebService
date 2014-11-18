@@ -3,7 +3,7 @@ package com.auto.jaxws.cxf.dao;
 import java.util.List;
 
 import com.auto.jaxws.cxf.model.Auto;
-import com.auto.jaxws.cxf.model.Autocategory;
+
 
 /**
  * 
@@ -18,6 +18,6 @@ public interface IAutoDao {
 	
 	public Auto findById(int id);
 
-	public List<Autocategory> selectAllAutoCategory();
+
 
 }
