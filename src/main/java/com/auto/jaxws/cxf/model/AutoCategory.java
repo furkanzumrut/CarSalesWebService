@@ -22,6 +22,7 @@ public class AutoCategory implements Serializable {
 
 	private Integer categoryid;
 	private String categoryname;
+	
 	private Set<Auto> autos = new HashSet<Auto>(0);
 
 	@Id

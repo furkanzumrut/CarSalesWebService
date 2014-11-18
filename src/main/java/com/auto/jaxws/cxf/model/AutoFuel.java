@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
 @Table(name = "autofuel", catalog = "carsalesdb", schema = "public")
@@ -22,6 +23,7 @@ public class AutoFuel implements Serializable  {
 
 	private Integer autofueldid;
 	private String autofuelname;
+	@XmlTransient
 	private Set<Auto> autos = new HashSet<Auto>(0);
 	
 	protected AutoFuel() {
