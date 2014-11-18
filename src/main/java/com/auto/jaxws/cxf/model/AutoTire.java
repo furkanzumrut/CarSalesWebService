@@ -1,7 +1,5 @@
 package com.auto.jaxws.cxf.model;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -20,6 +18,10 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "autotire", catalog = "carsalesdb", schema = "public")
 public class AutoTire implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7302438744357088659L;
 	private Integer autotireid;
 	private String autotirename;
 	private Set<Auto> autos = new HashSet<Auto>(0);

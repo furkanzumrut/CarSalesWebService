@@ -20,12 +20,14 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 @Entity
 @Table(name = "auto", catalog = "carsalesdb", schema = "public")
 public class Auto implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1757842871351737590L;
 	private Integer autoid;
 	private String autoname;
 	private Integer automodel;

@@ -12,14 +12,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "autocategory", catalog = "carsalesdb", schema = "public")
 public class AutoCategory implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1868883821477160731L;
 	private Integer categoryid;
 	private String categoryname;
 	

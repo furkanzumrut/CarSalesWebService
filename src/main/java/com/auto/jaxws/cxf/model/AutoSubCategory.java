@@ -1,7 +1,5 @@
 package com.auto.jaxws.cxf.model;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,6 +20,10 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "autosubcategory", catalog = "carsalesdb", schema = "public")
 public class AutoSubCategory implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3243955845060796077L;
 	private Integer subcategoryid;
 	private String subcategoryname;
 

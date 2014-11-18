@@ -1,7 +1,5 @@
 package com.auto.jaxws.cxf.model;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,13 +12,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
 @Table(name = "autofuel", catalog = "carsalesdb", schema = "public")
 public class AutoFuel implements Serializable  {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8145654757578623576L;
 	private Integer autofueldid;
 	private String autofuelname;
 	

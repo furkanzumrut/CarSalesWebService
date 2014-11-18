@@ -12,11 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-import javax.persistence.Transient;
-import javax.persistence.UniqueConstraint;
 import javax.xml.bind.annotation.XmlTransient;
 
-import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
@@ -24,6 +21,10 @@ import org.hibernate.annotations.Parameter;
 @Table(name = "autosales", catalog = "carsalesdb", schema = "public")
 public class AutoSales implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1897217644502965783L;
 	private Integer autoid;
 	private Auto auto;
 	private Customer customer;

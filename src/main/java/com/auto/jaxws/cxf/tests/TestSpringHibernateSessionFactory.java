@@ -1,10 +1,5 @@
 package com.auto.jaxws.cxf.tests;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import org.hibernate.JDBCException;
 import org.springframework.context.ApplicationContext;
 
 
@@ -13,7 +8,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import com.auto.jaxws.cxf.model.Auto;
-import com.auto.jaxws.cxf.model.AutoCategory;
 import com.auto.jaxws.cxf.ws.AutoService;
 /**
  * 
@@ -35,7 +29,7 @@ public class TestSpringHibernateSessionFactory {
 		public Integer getStatus(){return status;}
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 
 		//ApplicationContext applicationContext = null;
 		//ApplicationContext ctx = ContextLoader.getCurrentWebApplicationContext();  
 		

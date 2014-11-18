@@ -1,7 +1,5 @@
 package com.auto.jaxws.cxf.model;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,7 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
@@ -22,6 +19,10 @@ import javax.xml.bind.annotation.XmlTransient;
 public class AutoGear  implements Serializable {
 	
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8433470193716532468L;
 	private Integer autogearid;
 	private String autogearname;
 	private Set<Auto> autos = new HashSet<Auto>(0);
