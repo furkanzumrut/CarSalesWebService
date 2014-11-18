@@ -13,7 +13,7 @@
 		</layout>
 	</appender>
 
-	<appender name="file" class="org.apache.log4j.RollingFileAppender">
+<appender name="file" class="org.apache.log4j.RollingFileAppender">
 		<param name="file" value="logs/logger.log" />
 		<param name="MaxFileSize" value="5MB" />
 		<param name="MaxBackupIndex" value="10" />
@@ -22,12 +22,15 @@
 		</layout>
 
 	</appender>
-	<logger name="org.hibernate">
-		<level value="ALL" />
-		<appender-ref ref="FILE" />
-	</logger>
+<!-- 	<logger name="org.springframework"> -->
+<!-- 		<level value="info" /> -->
+<!-- 	</logger> -->
+<!-- 	<logger name="org.hibernate"> -->
+<!-- 		<level value="ALL" /> -->
+<!-- 		<appender-ref ref="FILE" /> -->
+<!-- 	</logger> -->
 	<root>
-		<priority value="debug" />
+		<priority value="warn" />
 		<appender-ref ref="console" />
 		<appender-ref ref="file" />
 	</root>

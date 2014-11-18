@@ -31,27 +31,27 @@ public class AutoService implements IAutoService {
 
 	@Override
 	public List<Auto> getAllAutos() {
-		// TODO Auto-generated method stub
+		// 
 		return autoDao.selectAll();
 	}
 
 	@Override
 	public Auto getAuto(Integer autoid) {
-		// TODO Auto-generated method stub
+		// 
 
 		return autoDao.findById(autoid);
 	}
 
 	@Override
 	public String getReturnWork() {
-		// TODO Auto-generated method stub
+		// 
 
 		return "It works!";
 	}
 
 	@Override
 	public List<Auto> getAllAutosNames() {
-		// TODO Auto-generated method stub
+		// 
 		return autoDao.selectAutosName();
 	}
 
