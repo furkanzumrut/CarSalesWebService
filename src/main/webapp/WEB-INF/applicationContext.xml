@@ -136,14 +136,14 @@
 	<!-- WHEN YOU WANT TO MAKE SURE COMMENT ALL SERVICES -->
 <!-- 	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" /> -->
 
-	<jaxrs:server id="autoServiceREST" address="/v/1/rest/AutoService">
-		<jaxrs:serviceBeans>
-			<ref bean="autoService" />
-		</jaxrs:serviceBeans>
+<!-- 	<jaxrs:server id="autoServiceREST" address="/v/1/rest/AutoService"> -->
+<!-- 		<jaxrs:serviceBeans> -->
+<!-- 			<ref bean="autoService" /> -->
+<!-- 		</jaxrs:serviceBeans> -->
 <!-- 		<jaxrs:providers> -->
 <!-- 			<ref bean='jsonProvider' /> -->
 <!-- 		</jaxrs:providers> -->
-	</jaxrs:server>
+<!-- 	</jaxrs:server> -->
 	<jaxws:endpoint id="autoServiceWS" implementor="#autoService"
 		address="/v/1/soap/autoService" />
 	<!-- WHEN YOU WANT TO RUN TEST MAKE SURE COMMENT ALL SERVICES -->
