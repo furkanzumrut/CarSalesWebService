@@ -10,8 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.codehaus.jackson.annotate.JsonIgnore;
-
 @Entity
 @Table(name = "autoimage", catalog = "carsalesdb", schema = "public")
 public class AutoImage {
@@ -47,7 +45,6 @@ public class AutoImage {
 	}
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "autoid", nullable = false)
-	@JsonIgnore
 	public Auto getAuto() {
 		return auto;
 	}

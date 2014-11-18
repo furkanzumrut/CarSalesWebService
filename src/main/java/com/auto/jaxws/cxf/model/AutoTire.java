@@ -15,8 +15,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.codehaus.jackson.annotate.JsonIgnore;
-
 @Entity
 @Table(name = "autotire", catalog = "carsalesdb", schema = "public")
 public class AutoTire implements Serializable {
@@ -67,7 +65,6 @@ public class AutoTire implements Serializable {
 		this.autotirename = autotirename;
 	}
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autotire")
-	@JsonIgnore
 	public Set<Auto> getAutos() {
 		return autos;
 	}
