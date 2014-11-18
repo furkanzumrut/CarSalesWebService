@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 
 import static javax.persistence.GenerationType.IDENTITY;
@@ -22,6 +23,7 @@ public class AutoCategory implements Serializable {
 
 	private Integer categoryid;
 	private String categoryname;
+	@Transient
 	private Set<Auto> autos = new HashSet<Auto>(0);
 
 	@Id

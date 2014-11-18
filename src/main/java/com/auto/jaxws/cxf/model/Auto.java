@@ -19,6 +19,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -201,7 +202,7 @@ public class Auto implements Serializable {
 	public void setAutoprice(Double autoprice) {
 		this.autoprice = autoprice;
 	}
-
+	
 	@OneToOne(fetch = FetchType.LAZY, mappedBy = "auto", cascade = CascadeType.ALL)
 	public AutoSales getAutosales() {
 		return autosales;
