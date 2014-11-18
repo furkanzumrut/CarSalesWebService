@@ -23,7 +23,7 @@ public class AutoFuel implements Serializable  {
 
 	private Integer autofueldid;
 	private String autofuelname;
-	@XmlTransient
+	
 	private Set<Auto> autos = new HashSet<Auto>(0);
 	
 	protected AutoFuel() {
@@ -63,7 +63,9 @@ public class AutoFuel implements Serializable  {
 	public void setAutofuelname(String autofuelname) {
 		this.autofuelname = autofuelname;
 	}
+	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autofuel")
+	@XmlTransient
 	public Set<Auto> getAutos() {
 		return autos;
 	}
