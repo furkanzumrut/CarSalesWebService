@@ -52,4 +52,10 @@ public class AutoService implements IAutoService {
 		return "It works!";
 	}
 
+	@Override
+	public List<Auto> getAllAutosNames() {
+		// TODO Auto-generated method stub
+		return autoDao.selectAutosName();
+	}
+
 }

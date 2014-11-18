@@ -88,4 +88,12 @@ public class AutoDao implements IAutoDao{
 		return auto;
 	}
 
+	@Override
+	public List<Auto> selectAutosName() {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();	
+		Query query = session.createQuery("SELECT a.autoname from Auto a");
+		return query.list();
+	}
+
 }

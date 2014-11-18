@@ -28,6 +28,8 @@ public interface IAutoService {
 	public void addAuto(Auto auto);
 
 	public List<Auto> getAllAutos();
+	
+	public List<Auto> getAllAutosNames();
 
 	public Auto getAuto(Integer autoid);
 

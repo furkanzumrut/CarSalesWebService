@@ -18,6 +18,7 @@ public interface IAutoDao {
 	
 	public Auto findById(int id);
 
+	public List<Auto> selectAutosName();
 
 
 }
