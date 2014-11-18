@@ -73,7 +73,6 @@ public class AutoSales  implements Serializable {
 	}
 	@OneToOne(fetch = FetchType.LAZY)
 	@PrimaryKeyJoinColumn
-	//Added
 	public Auto getAuto() {
 		return auto;
 	}
