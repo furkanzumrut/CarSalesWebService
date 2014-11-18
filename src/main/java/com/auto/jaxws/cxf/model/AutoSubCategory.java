@@ -16,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
 @Table(name = "autosubcategory", catalog = "carsalesdb", schema = "public")
@@ -83,6 +84,7 @@ public class AutoSubCategory implements Serializable {
 		this.autocategory = autocategory;
 	}
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autosubcategory")
+	@XmlTransient
 	public Set<Auto> getAutos() {
 		return autos;
 	}

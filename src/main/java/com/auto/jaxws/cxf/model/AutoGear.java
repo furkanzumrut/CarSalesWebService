@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
 @Table(name = "autogear", catalog = "carsalesdb", schema = "public")
@@ -69,6 +70,7 @@ public class AutoGear  implements Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autogear")
+	@XmlTransient
 	public Set<Auto> getAutos() {
 		return autos;
 	}
