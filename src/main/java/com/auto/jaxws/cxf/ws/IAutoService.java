@@ -6,6 +6,7 @@ import javax.jws.WebService;
 
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
+import com.auto.jaxws.cxf.model.User;
 
 import org.apache.cxf.annotations.GZIP;
 
@@ -25,8 +26,10 @@ public interface IAutoService {
 	public List<Auto> getAllAutosNames();
 	
 	public List<AutoCategory> getAllCategory();
-
+	
 	public Auto getAuto(Integer autoid);
+	
+	public User getUser(String username);
 
 	public String getReturnWork();
 

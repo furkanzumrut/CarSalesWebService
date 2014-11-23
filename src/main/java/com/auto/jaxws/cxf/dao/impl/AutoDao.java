@@ -12,6 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.auto.jaxws.cxf.dao.IAutoDao;
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
+import com.auto.jaxws.cxf.model.AutoSubCategory;
+import com.auto.jaxws.cxf.model.User;
 
 /**
  * 
@@ -108,5 +110,47 @@ public class AutoDao implements IAutoDao{
 		session.getTransaction().commit();
 		return persons;
 	}
+
+	@Override
+	public List<AutoSubCategory> selectAllSubCategory() {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(AutoSubCategory.class);
+		
+		@SuppressWarnings("unchecked")
+		List<AutoSubCategory> persons = (List<AutoSubCategory>) criteria.list();
+		session.getTransaction().commit();
+		return persons;
+	}
+
+	@Override
+	public User findUserByName(String username) {
+		Session session = getSessionFactory().getCurrentSession();
+		//Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		
+		//USING THIS
+		//Criteria criteria = session.createCriteria(Auto.class).add(Restrictions.eq("autoid", id));
+		//***
+
+		//Query query = session.createQuery("SELECT a from Auto a where autoid = :id ");
+
+		Query query = session.createQuery("SELECT a.username from User a where username = :username ");
+
+		
+		query.setParameter("username", username);
+		User user = (User) query.list().get(0);
+		//User auto = (User) session.get(User.class, username);
+		
+
+		//criteria.add(Restrictions.eq("autoid", id));
+		//Auto auto = (Auto) criteria.list().get(0);
+		
+		session.getTransaction().commit();
+		
+		return user;
+	}
+
+
 
 }
