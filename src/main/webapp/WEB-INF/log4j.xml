@@ -22,15 +22,15 @@
 		</layout>
 
 	</appender>
-	<logger name="org.springframework">
-		<level value="info" />
-	</logger>
-	<logger name="org.hibernate">
-		<level value="ALL" />
-		<appender-ref ref="FILE" />
-	</logger>
+<!-- 	<logger name="org.springframework"> -->
+<!-- 		<level value="info" /> -->
+<!-- 	</logger> -->
+<!-- 	<logger name="org.hibernate"> -->
+<!-- 		<level value="ALL" /> -->
+<!-- 		<appender-ref ref="FILE" /> -->
+<!-- 	</logger> -->
 	<root>
-		<priority value="debug" />
+		<priority value="warn" />
 		<appender-ref ref="console" />
 		<appender-ref ref="file" />
 	</root>
