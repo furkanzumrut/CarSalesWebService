@@ -5,6 +5,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -130,25 +131,25 @@ public class AutoDao implements IAutoDao{
 		session.beginTransaction();
 		
 		//USING THIS
-		//Criteria criteria = session.createCriteria(Auto.class).add(Restrictions.eq("autoid", id));
+		Criteria criteria = session.createCriteria(User.class);
 		//***
 
 		//Query query = session.createQuery("SELECT a from Auto a where autoid = :id ");
 
-		//Query query = session.createQuery("SELECT a.username from User a where username = :username ");
+		//Query query = session.createQuery("SELECT username from User where username = :username ");
 
 		
 		//query.setParameter("username", username);
 		//User user = (User) query.list().get(0);
-		User auto = (User) session.get(User.class, username);
+		//User auto = (User) session.get(User.class, username);
 		
 
-		//criteria.add(Restrictions.eq("autoid", id));
-		//Auto auto = (Auto) criteria.list().get(0);
+		criteria.add(Restrictions.eq("username", username));
+		User user = (User) criteria.list().get(0);
 		
 		session.getTransaction().commit();
 		
-		return auto;
+		return user;
 	}
 
 
