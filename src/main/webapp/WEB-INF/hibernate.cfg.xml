@@ -20,5 +20,7 @@
         <mapping class="com.auto.jaxws.cxf.model.AutoSubCategory"/>
         <mapping class="com.auto.jaxws.cxf.model.AutoTire"/>
         <mapping class="com.auto.jaxws.cxf.model.Customer"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoImage"/>
+        <mapping class="com.auto.jaxws.cxf.model.User"/>
     </session-factory>
 </hibernate-configuration>
