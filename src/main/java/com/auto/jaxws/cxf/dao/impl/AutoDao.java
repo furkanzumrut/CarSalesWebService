@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.auto.jaxws.cxf.dao.IAutoDao;
 import com.auto.jaxws.cxf.model.Auto;
+import com.auto.jaxws.cxf.model.AutoCategory;
 
 /**
  * 
@@ -94,6 +95,18 @@ public class AutoDao implements IAutoDao{
 		session.beginTransaction();	
 		Query query = session.createQuery("SELECT a.autoname from Auto a");
 		return query.list();
+	}
+
+	@Override
+	public List<AutoCategory> selectAllCategory() {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(AutoCategory.class);
+		
+		@SuppressWarnings("unchecked")
+		List<AutoCategory> persons = (List<AutoCategory>) criteria.list();
+		session.getTransaction().commit();
+		return persons;
 	}
 
 }
