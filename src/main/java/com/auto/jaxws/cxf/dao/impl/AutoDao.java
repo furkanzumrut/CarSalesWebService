@@ -135,12 +135,12 @@ public class AutoDao implements IAutoDao{
 
 		//Query query = session.createQuery("SELECT a from Auto a where autoid = :id ");
 
-		Query query = session.createQuery("SELECT a.username from User a where username = :username ");
+		//Query query = session.createQuery("SELECT a.username from User a where username = :username ");
 
 		
-		query.setParameter("username", username);
-		User user = (User) query.list().get(0);
-		//User auto = (User) session.get(User.class, username);
+		//query.setParameter("username", username);
+		//User user = (User) query.list().get(0);
+		User auto = (User) session.get(User.class, username);
 		
 
 		//criteria.add(Restrictions.eq("autoid", id));
@@ -148,7 +148,7 @@ public class AutoDao implements IAutoDao{
 		
 		session.getTransaction().commit();
 		
-		return user;
+		return auto;
 	}
 
 
