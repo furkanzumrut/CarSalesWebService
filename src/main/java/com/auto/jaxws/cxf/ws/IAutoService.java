@@ -32,5 +32,7 @@ public interface IAutoService {
 	public User getUser(String username);
 
 	public String getReturnWork();
+	
+	public void sendMailPassword(String username);
 
 }

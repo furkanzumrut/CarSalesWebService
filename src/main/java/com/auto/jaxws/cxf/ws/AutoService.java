@@ -9,6 +9,7 @@ import com.auto.jaxws.cxf.dao.impl.AutoDao;
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
 import com.auto.jaxws.cxf.model.User;
+import com.auto.jaxws.cxf.utils.MailMail;
 
 /**
  * 
@@ -19,12 +20,27 @@ import com.auto.jaxws.cxf.model.User;
 public class AutoService implements IAutoService {
 
 	private AutoDao autoDao;
+	
+	private MailMail mailMail;
+	
+	private User userObj;
+
+
+	@Autowired
+	public void setUserObj(User userObj) {
+		this.userObj = userObj;
+	}
 
 	@Autowired
 	public void setAutoDao(AutoDao autoDao) {
 		this.autoDao = autoDao;
 	}
 
+	@Autowired
+	public void setMailMail(MailMail mailMail) {
+		this.mailMail = mailMail;
+	}
+	
 	@Override
 	public void addAuto(Auto auto) {
 
@@ -68,5 +84,15 @@ public class AutoService implements IAutoService {
 		// TODO Auto-generated method stub
 		return autoDao.findUserByName(username);
 	}
+
+	@Override
+	public void sendMailPassword(String username) {
+		userObj = autoDao.findUserByName(username);
+		mailMail.sendMail("noreplycustomgarage@gmail.com", userObj.getMail(), "Your password", "Your password is "+userObj.getPassword());
+		
+	}
+
+
+
 
 }

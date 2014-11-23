@@ -14,8 +14,7 @@
 	<!-- activates annotations (@Service, @Component, @Autowired) -->
 	<context:component-scan base-package="com.auto.jaxws.cxf.ws" />
 	<context:component-scan base-package="com.auto.jaxws.cxf.dao.impl" />
-	<context:component-scan 
-		base-package="com.auto.jaxws.cxf.model" />
+	<context:component-scan base-package="com.auto.jaxws.cxf.model" />
 	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
 	<tx:annotation-driven proxy-target-class="true"
 		transaction-manager="transactionManager" />
@@ -32,6 +31,23 @@
 					p:name="task" />
 			</set>
 		</property>
+	</bean>
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="noreplycustomgarage@gmail.com" />
+		<property name="password" value="fz199300" />
+
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="mailMail" class="com.auto.jaxws.cxf.utils.MailMail">
+		<property name="mailSender" ref="mailSender" />
 	</bean>
 
 	<bean id="transactionManager"
@@ -101,10 +117,13 @@
 	<bean id="autoDao" class="com.auto.jaxws.cxf.dao.impl.AutoDao">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-
+	<bean id="user" class="com.auto.jaxws.cxf.model.User" />
 	<bean id="autoService" class="com.auto.jaxws.cxf.ws.AutoService">
 		<property name="autoDao" ref="autoDao" />
+		<property name="mailMail" ref="mailMail" />
+		<property name="userObj" ref="user" />
 	</bean>
+
 
 
 
@@ -119,15 +138,15 @@
 
 	</bean>
 
-<!-- 	<bean id="dataSource" -->
-<!-- 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
-<!-- 		<property name="driverClassName" value="org.postgresql.Driver" /> -->
-<!-- 		<property name="url" -->
-<!-- 			value="jdbc:postgresql://localhost:5432/carsalesdb" /> -->
-<!-- 		<property name="username" value="postgres" /> -->
-<!-- 		<property name="password" value="199300" /> -->
+	<!-- <bean id="dataSource" -->
+	<!-- class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+	<!-- <property name="driverClassName" value="org.postgresql.Driver" /> -->
+	<!-- <property name="url" -->
+	<!-- value="jdbc:postgresql://localhost:5432/carsalesdb" /> -->
+	<!-- <property name="username" value="postgres" /> -->
+	<!-- <property name="password" value="199300" /> -->
 
-<!-- 	</bean> -->
+	<!-- </bean> -->
 
 	<!-- references a spring bean -->
 	<!-- <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->
