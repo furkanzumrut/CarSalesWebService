@@ -59,7 +59,7 @@ public class AutoRim implements Serializable {
 		this.autorimid = autorimid;
 	}
 
-	@Column(name = "autorimname")
+	@Column(name = "autorimname", nullable = false)
 	public String getAutorimname() {
 		return autorimname;
 	}

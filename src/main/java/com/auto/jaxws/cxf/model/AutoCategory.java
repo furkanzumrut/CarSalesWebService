@@ -50,7 +50,7 @@ public class AutoCategory implements Serializable {
 		this.categoryid = categoryid;
 	}
 
-	@Column(name = "categoryname")
+	@Column(name = "categoryname",nullable = false)
 	public String getCategoryname() {
 		return categoryname;
 	}

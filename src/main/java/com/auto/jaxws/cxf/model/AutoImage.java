@@ -37,7 +37,7 @@ public class AutoImage {
 	public void setAutoimageid(Integer autoimageid) {
 		this.autoimageid = autoimageid;
 	}
-	@Column(name = "autourl")
+	@Column(name = "autourl", nullable = false)
 	public String getAutourl() {
 		return autourl;
 	}

@@ -57,7 +57,7 @@ public class AutoFuel implements Serializable  {
 	public void setAutofueldid(Integer autofueldid) {
 		this.autofueldid = autofueldid;
 	}
-	@Column(name = "autofuelname")
+	@Column(name = "autofuelname", nullable = false)
 	public String getAutofuelname() {
 		return autofuelname;
 	}

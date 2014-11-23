@@ -113,7 +113,7 @@ public class Auto implements Serializable {
 		this.autoid = autoid;
 	}
 
-	@Column(name = "autoname")
+	@Column(name = "autoname", nullable = false)
 	public String getAutoname() {
 		return autoname;
 	}
@@ -122,7 +122,7 @@ public class Auto implements Serializable {
 		this.autoname = autoname;
 	}
 
-	@Column(name = "automodel")
+	@Column(name = "automodel", nullable = false)
 	public Integer getAutomodel() {
 		return automodel;
 	}
@@ -131,7 +131,7 @@ public class Auto implements Serializable {
 		this.automodel = automodel;
 	}
 
-	@Column(name = "auto100km")
+	@Column(name = "auto100km", nullable = false)
 	public Double getAuto100km() {
 		return auto100km;
 	}
@@ -140,7 +140,7 @@ public class Auto implements Serializable {
 		this.auto100km = auto100km;
 	}
 
-	@Column(name = "autocolor")
+	@Column(name = "autocolor", nullable = false)
 	public Integer getAutocolor() {
 		return autocolor;
 	}
@@ -149,7 +149,7 @@ public class Auto implements Serializable {
 		this.autocolor = autocolor;
 	}
 
-	@Column(name = "autokm")
+	@Column(name = "autokm", nullable = false)
 	public Integer getAutokm() {
 		return autokm;
 	}
@@ -158,7 +158,7 @@ public class Auto implements Serializable {
 		this.autokm = autokm;
 	}
 
-	@Column(name = "autohp")
+	@Column(name = "autohp", nullable = false)
 	public Integer getAutohp() {
 		return autohp;
 	}
@@ -167,7 +167,7 @@ public class Auto implements Serializable {
 		this.autohp = autohp;
 	}
 
-	@Column(name = "autohand")
+	@Column(name = "autohand", nullable = false)
 	public Integer getAutohand() {
 		return autohand;
 	}
@@ -177,7 +177,7 @@ public class Auto implements Serializable {
 	}
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "autoregisterdate")
+	@Column(name = "autoregisterdate", nullable = false)
 	public Date getAutoregisterdate() {
 		return autoregisterdate;
 	}
@@ -186,7 +186,7 @@ public class Auto implements Serializable {
 		this.autoregisterdate = autoregisterdate;
 	}
 
-	@Column(name = "autotype")
+	@Column(name = "autotype",nullable = false)
 	public Integer getAutotype() {
 		return autotype;
 	}
@@ -195,7 +195,7 @@ public class Auto implements Serializable {
 		this.autotype = autotype;
 	}
 
-	@Column(name = "autoprice")
+	@Column(name = "autoprice",nullable = false)
 	public Double getAutoprice() {
 		return autoprice;
 	}

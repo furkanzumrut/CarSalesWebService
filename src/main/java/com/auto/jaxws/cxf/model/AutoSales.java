@@ -57,7 +57,7 @@ public class AutoSales implements Serializable {
 		this.customer = customer;
 	}
 
-	@Column(name = "sold")
+	@Column(name = "sold", nullable = false)
 	public Integer getSold() {
 		return sold;
 	}

@@ -58,7 +58,7 @@ public class AutoInterrior implements Serializable  {
 	public void setAutointerriorid(Integer autointerriorid) {
 		this.autointerriorid = autointerriorid;
 	}
-	@Column(name = "autointerriorname")
+	@Column(name = "autointerriorname", nullable = false)
 	public String getAutointerriorname() {
 		return autointerriorname;
 	}

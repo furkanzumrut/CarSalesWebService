@@ -37,7 +37,7 @@ public class User implements Serializable {
 		this.userid = userid;
 	}
 
-	@Column(name = "username")
+	@Column(name = "username", nullable = false)
 	public String getUsername() {
 		return username;
 	}
@@ -46,7 +46,7 @@ public class User implements Serializable {
 		this.username = username;
 	}
 
-	@Column(name = "password")
+	@Column(name = "password", nullable = false)
 	public String getPassword() {
 		return password;
 	}
@@ -55,7 +55,7 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	@Column(name = "namesurname")
+	@Column(name = "namesurname", nullable = false)
 	public String getNamesurname() {
 		return namesurname;
 	}
@@ -64,7 +64,7 @@ public class User implements Serializable {
 		this.namesurname = namesurname;
 	}
 
-	@Column(name = "mail")
+	@Column(name = "mail", nullable = false)
 	public String getMail() {
 		return mail;
 	}

@@ -67,7 +67,7 @@ public class AutoSubCategory implements Serializable {
 		this.subcategoryid = subcategoryid;
 	}
 
-	@Column(name = "subcategoryname")
+	@Column(name = "subcategoryname", nullable = false)
 	public String getSubcategoryname() {
 		return subcategoryname;
 	}

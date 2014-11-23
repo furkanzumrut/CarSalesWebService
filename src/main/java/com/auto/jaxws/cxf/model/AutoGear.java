@@ -62,7 +62,7 @@ public class AutoGear  implements Serializable {
 	public void setAutogearid(Integer autogearid) {
 		this.autogearid = autogearid;
 	}
-	@Column(name = "autogearname")
+	@Column(name = "autogearname", nullable = false)
 	public String getAutogearname() {
 		return autogearname;
 	}

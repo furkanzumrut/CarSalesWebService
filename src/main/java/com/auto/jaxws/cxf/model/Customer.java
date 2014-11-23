@@ -57,28 +57,28 @@ public class Customer implements Serializable  {
 	public void setCustomerid(Integer customerid) {
 		this.customerid = customerid;
 	}
-	@Column(name= "customername")
+	@Column(name= "customername", nullable = false)
 	public String getCustomername() {
 		return customername;
 	}
 	public void setCustomername(String customername) {
 		this.customername = customername;
 	}
-	@Column(name= "customerphone")
+	@Column(name= "customerphone", nullable = false)
 	public String getCustomerphone() {
 		return customerphone;
 	}
 	public void setCustomerphone(String customerphone) {
 		this.customerphone = customerphone;
 	}
-	@Column(name= "customergender")
+	@Column(name= "customergender", nullable = false)
 	public Integer getCustomergender() {
 		return customergender;
 	}
 	public void setCustomergender(Integer customergender) {
 		this.customergender = customergender;
 	}
-	@Column(name= "customeradress")
+	@Column(name= "customeradress", nullable = false)
 	public String getCustomeradress() {
 		return customeradress;
 	}
@@ -86,7 +86,7 @@ public class Customer implements Serializable  {
 		this.customeradress = customeradress;
 	}
 	@Temporal(TemporalType.DATE)
-	@Column(name= "customerregisterdate")
+	@Column(name= "customerregisterdate", nullable = false)
 	public Date getCustomerregisterdate() {
 		return customerregisterdate;
 	}

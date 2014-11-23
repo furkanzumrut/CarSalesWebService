@@ -59,7 +59,7 @@ public class AutoTire implements Serializable {
 		this.autotireid = autotireid;
 	}
 
-	@Column(name = "autotirename")
+	@Column(name = "autotirename", nullable = false)
 	public String getAutotirename() {
 		return autotirename;
 	}
