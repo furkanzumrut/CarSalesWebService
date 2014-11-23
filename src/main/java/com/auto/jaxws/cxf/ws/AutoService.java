@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.auto.jaxws.cxf.dao.impl.AutoDao;
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
+import com.auto.jaxws.cxf.model.AutoImage;
+import com.auto.jaxws.cxf.model.AutoSubCategory;
 import com.auto.jaxws.cxf.model.User;
 import com.auto.jaxws.cxf.utils.MailMail;
 
@@ -75,13 +77,11 @@ public class AutoService implements IAutoService {
 
 	@Override
 	public List<AutoCategory> getAllCategory() {
-		// TODO Auto-generated method stub
 		return autoDao.selectAllCategory();
 	}
 
 	@Override
 	public User getUser(String username) {
-		// TODO Auto-generated method stub
 		return autoDao.findUserByName(username);
 	}
 
@@ -89,6 +89,32 @@ public class AutoService implements IAutoService {
 	public void sendMailPassword(String username) {
 		userObj = autoDao.findUserByName(username);
 		mailMail.sendMail("noreplycustomgarage@gmail.com", userObj.getMail(), "Your password", "Your password is "+userObj.getPassword());
+		
+	}
+
+
+
+
+
+	@Override
+	public List<AutoImage> getAllImageByAutoId(Integer autoid) {
+		return autoDao.findImagesByAutoId(autoid);
+	}
+
+	@Override
+	public void addAutoCategory(AutoCategory autocategory) {
+		autoDao.AutoCategoryInsert(autocategory);
+	}
+
+	@Override
+	public void addAutoSubCategory(AutoSubCategory autosubcategory) {
+		autoDao.AutoSubCategoryInsert(autosubcategory);
+		
+	}
+
+	@Override
+	public void addAutoImage(AutoImage autoimage) {
+		autoDao.AutoImageInsert(autoimage);
 		
 	}
 

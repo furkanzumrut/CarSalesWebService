@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.auto.jaxws.cxf.dao.IAutoDao;
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
+import com.auto.jaxws.cxf.model.AutoImage;
 import com.auto.jaxws.cxf.model.AutoSubCategory;
 import com.auto.jaxws.cxf.model.User;
 
@@ -150,6 +151,53 @@ public class AutoDao implements IAutoDao{
 		session.getTransaction().commit();
 		
 		return user;
+	}
+
+	@Override
+	public List<AutoImage> findImagesByAutoId(int id) {
+		Session session = getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		
+	
+		Criteria criteria = session.createCriteria(AutoImage.class);
+
+
+		criteria.add(Restrictions.eq("autoid", id));
+		List<AutoImage> autoimages = (List<AutoImage>) criteria.list();
+		
+		session.getTransaction().commit();
+		return autoimages;
+	}
+
+	@Override
+	@Transactional
+	public void AutoCategoryInsert(AutoCategory autocategory) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(autocategory);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoSubCategoryInsert(AutoSubCategory autosubcategory) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(autosubcategory);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoImageInsert(AutoImage autoimage) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(autoimage);
+		session.getTransaction().commit();
+		
 	}
 
 
