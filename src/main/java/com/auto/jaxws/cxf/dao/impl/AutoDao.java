@@ -14,8 +14,12 @@ import com.auto.jaxws.cxf.dao.IAutoDao;
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
 import com.auto.jaxws.cxf.model.AutoFuel;
+import com.auto.jaxws.cxf.model.AutoGear;
 import com.auto.jaxws.cxf.model.AutoImage;
+import com.auto.jaxws.cxf.model.AutoInterrior;
+import com.auto.jaxws.cxf.model.AutoRim;
 import com.auto.jaxws.cxf.model.AutoSubCategory;
+import com.auto.jaxws.cxf.model.AutoTire;
 import com.auto.jaxws.cxf.model.User;
 
 /**
@@ -209,6 +213,54 @@ public class AutoDao implements IAutoDao{
 		
 		@SuppressWarnings("unchecked")
 		List<AutoFuel> persons = (List<AutoFuel>) criteria.list();
+		session.getTransaction().commit();
+		return persons;
+	}
+
+	@Override
+	public List<AutoGear> selectAllGear() {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(AutoGear.class);
+		
+		@SuppressWarnings("unchecked")
+		List<AutoGear> persons = (List<AutoGear>) criteria.list();
+		session.getTransaction().commit();
+		return persons;
+	}
+
+	@Override
+	public List<AutoInterrior> selectAllInterrior() {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(AutoInterrior.class);
+		
+		@SuppressWarnings("unchecked")
+		List<AutoInterrior> persons = (List<AutoInterrior>) criteria.list();
+		session.getTransaction().commit();
+		return persons;
+	}
+
+	@Override
+	public List<AutoRim> selectAllRim() {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(AutoRim.class);
+		
+		@SuppressWarnings("unchecked")
+		List<AutoRim> persons = (List<AutoRim>) criteria.list();
+		session.getTransaction().commit();
+		return persons;
+	}
+
+	@Override
+	public List<AutoTire> selectAllTire() {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(AutoTire.class);
+		
+		@SuppressWarnings("unchecked")
+		List<AutoTire> persons = (List<AutoTire>) criteria.list();
 		session.getTransaction().commit();
 		return persons;
 	}

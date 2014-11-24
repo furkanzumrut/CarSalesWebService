@@ -5,8 +5,12 @@ import java.util.List;
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
 import com.auto.jaxws.cxf.model.AutoFuel;
+import com.auto.jaxws.cxf.model.AutoGear;
 import com.auto.jaxws.cxf.model.AutoImage;
+import com.auto.jaxws.cxf.model.AutoInterrior;
+import com.auto.jaxws.cxf.model.AutoRim;
 import com.auto.jaxws.cxf.model.AutoSubCategory;
+import com.auto.jaxws.cxf.model.AutoTire;
 import com.auto.jaxws.cxf.model.User;
 
 /**
@@ -36,6 +40,18 @@ public interface IAutoDao {
 	
 	/* AutoFuel */
 	public List<AutoFuel> selectAllFuel();
+	
+	/* AutoGear */
+	public List<AutoGear> selectAllGear();
+	
+	/* AutoInterrior */
+	public List<AutoInterrior> selectAllInterrior();
+	
+	/* AutoRim */
+	public List<AutoRim> selectAllRim();
+	
+	/* AutoTire */
+	public List<AutoTire> selectAllTire();
 	
 	/* User */
 	public User findUserByName(String username);

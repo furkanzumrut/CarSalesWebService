@@ -9,8 +9,12 @@ import com.auto.jaxws.cxf.dao.impl.AutoDao;
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
 import com.auto.jaxws.cxf.model.AutoFuel;
+import com.auto.jaxws.cxf.model.AutoGear;
 import com.auto.jaxws.cxf.model.AutoImage;
+import com.auto.jaxws.cxf.model.AutoInterrior;
+import com.auto.jaxws.cxf.model.AutoRim;
 import com.auto.jaxws.cxf.model.AutoSubCategory;
+import com.auto.jaxws.cxf.model.AutoTire;
 import com.auto.jaxws.cxf.model.User;
 import com.auto.jaxws.cxf.utils.MailMail;
 
@@ -122,6 +126,26 @@ public class AutoService implements IAutoService {
 	@Override
 	public List<AutoFuel> getAllFuel() {
 		return autoDao.selectAllFuel();
+	}
+
+	@Override
+	public List<AutoGear> getAllGear() {
+		return autoDao.selectAllGear();
+	}
+
+	@Override
+	public List<AutoInterrior> getAllInterrior() {
+		return autoDao.selectAllInterrior();
+	}
+
+	@Override
+	public List<AutoRim> getAllAutoRim() {
+		return autoDao.selectAllRim();
+	}
+
+	@Override
+	public List<AutoTire> getAllTire() {
+		return autoDao.selectAllTire();
 	}
 
 
