@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import com.auto.jaxws.cxf.model.Auto;
+import com.auto.jaxws.cxf.model.AutoCategory;
 import com.auto.jaxws.cxf.ws.AutoService;
 /**
  * 
@@ -39,8 +40,9 @@ public class TestSpringHibernateSessionFactory {
 		
 		// auto.setCarid(2);
 		
-		Auto auto = autoService.getAuto(1);
-		System.out.println(auto.getAutoname());
+		
+		AutoCategory autocategory = new AutoCategory("Test");
+		autoService.addAutoCategory(autocategory);
 			// autoService.getAuto(1);
 			
 		

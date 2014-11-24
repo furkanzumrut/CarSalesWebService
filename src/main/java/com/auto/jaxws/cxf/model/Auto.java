@@ -78,7 +78,7 @@ public class Auto implements Serializable {
 			Double autoprice, AutoSales autosales, AutoCategory autocategory,
 			AutoFuel autofuel, AutoGear autogear, AutoInterrior autointerrior,
 			AutoRim autorim, AutoSubCategory autosubcategory,
-			AutoTire autotire, Set<AutoImage> autoimages) {
+			AutoTire autotire) {
 		super();
 		this.autoname = autoname;
 		this.automodel = automodel;
@@ -98,7 +98,7 @@ public class Auto implements Serializable {
 		this.autorim = autorim;
 		this.autosubcategory = autosubcategory;
 		this.autotire = autotire;
-		this.autoimages = autoimages;
+
 	}
 
 

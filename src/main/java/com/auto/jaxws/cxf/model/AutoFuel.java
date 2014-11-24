@@ -37,9 +37,8 @@ public class AutoFuel implements Serializable  {
 		this.autofueldid = autofueldid;
 	}
 
-	public AutoFuel(Integer autofueldid, String autofuelname) {
+	public AutoFuel(String autofuelname) {
 		super();
-		this.autofueldid = autofueldid;
 		this.autofuelname = autofuelname;
 	}
 	public AutoFuel(Integer autofueldid, String autofuelname, Set<Auto> autos) {

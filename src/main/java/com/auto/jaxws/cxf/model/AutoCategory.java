@@ -45,7 +45,12 @@ public class AutoCategory implements Serializable {
 		this.categoryname = categoryname;
 		this.autos = autos;
 	}
+	public AutoCategory(String categoryname) {
+		super();
 
+		this.categoryname = categoryname;
+
+	}
 	public void setCategoryid(Integer categoryid) {
 		this.categoryid = categoryid;
 	}
