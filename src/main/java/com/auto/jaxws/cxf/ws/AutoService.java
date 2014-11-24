@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.auto.jaxws.cxf.dao.impl.AutoDao;
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
+import com.auto.jaxws.cxf.model.AutoFuel;
 import com.auto.jaxws.cxf.model.AutoImage;
 import com.auto.jaxws.cxf.model.AutoSubCategory;
 import com.auto.jaxws.cxf.model.User;
@@ -116,6 +117,11 @@ public class AutoService implements IAutoService {
 	public void addAutoImage(AutoImage autoimage) {
 		autoDao.AutoImageInsert(autoimage);
 		
+	}
+
+	@Override
+	public List<AutoFuel> getAllFuel() {
+		return autoDao.selectAllFuel();
 	}
 
 

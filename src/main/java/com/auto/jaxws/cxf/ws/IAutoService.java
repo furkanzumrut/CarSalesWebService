@@ -6,6 +6,7 @@ import javax.jws.WebService;
 
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
+import com.auto.jaxws.cxf.model.AutoFuel;
 import com.auto.jaxws.cxf.model.AutoImage;
 import com.auto.jaxws.cxf.model.AutoSubCategory;
 import com.auto.jaxws.cxf.model.User;
@@ -38,6 +39,9 @@ public interface IAutoService {
 	/* AutoImage */
 	public List<AutoImage> getAllImageByAutoId(Integer autoid);
 	public void addAutoImage(AutoImage autoimage);
+	
+	/* AutoFuel */
+	public List<AutoFuel> getAllFuel();
 	
 	/* User */
 	public User getUser(String username);

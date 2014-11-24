@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.auto.jaxws.cxf.dao.IAutoDao;
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
+import com.auto.jaxws.cxf.model.AutoFuel;
 import com.auto.jaxws.cxf.model.AutoImage;
 import com.auto.jaxws.cxf.model.AutoSubCategory;
 import com.auto.jaxws.cxf.model.User;
@@ -198,6 +199,18 @@ public class AutoDao implements IAutoDao{
 		session.save(autoimage);
 		session.getTransaction().commit();
 		
+	}
+
+	@Override
+	public List<AutoFuel> selectAllFuel() {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(AutoFuel.class);
+		
+		@SuppressWarnings("unchecked")
+		List<AutoFuel> persons = (List<AutoFuel>) criteria.list();
+		session.getTransaction().commit();
+		return persons;
 	}
 
 

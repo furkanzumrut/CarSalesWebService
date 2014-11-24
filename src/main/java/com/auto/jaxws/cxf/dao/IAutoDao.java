@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.auto.jaxws.cxf.model.Auto;
 import com.auto.jaxws.cxf.model.AutoCategory;
+import com.auto.jaxws.cxf.model.AutoFuel;
 import com.auto.jaxws.cxf.model.AutoImage;
 import com.auto.jaxws.cxf.model.AutoSubCategory;
 import com.auto.jaxws.cxf.model.User;
@@ -32,6 +33,9 @@ public interface IAutoDao {
 	/* AutoImage */
 	public List<AutoImage> findImagesByAutoId(int id);
 	public void AutoImageInsert(AutoImage autoimage);
+	
+	/* AutoFuel */
+	public List<AutoFuel> selectAllFuel();
 	
 	/* User */
 	public User findUserByName(String username);
