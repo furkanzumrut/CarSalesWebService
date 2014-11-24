@@ -159,12 +159,12 @@ public class AutoDao implements IAutoDao{
 
 		session.beginTransaction();
 		
-	
-		Criteria criteria = session.createCriteria(AutoImage.class);
 
-
-		criteria.add(Restrictions.eq("autoid", id));
-		List<AutoImage> autoimages = (List<AutoImage>) criteria.list();
+		Query query = session.createQuery("SELECT a from AutoImage a where autoid = :id ");
+		query.setParameter("id", id);
+		
+		
+		List<AutoImage> autoimages = (List<AutoImage>) query.list();
 		
 		session.getTransaction().commit();
 		return autoimages;
