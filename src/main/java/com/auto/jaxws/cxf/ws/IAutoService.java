@@ -31,7 +31,7 @@ public interface IAutoService {
 	public List<Auto> getAllAutos();
 	public Auto getAuto(Integer autoid);
 	public List<Auto> getAllAutosNames();
-	
+	public void deleteAutoById(Integer autoid);
 	
 	/* AutoCategory */
 	public List<AutoCategory> getAllCategory();

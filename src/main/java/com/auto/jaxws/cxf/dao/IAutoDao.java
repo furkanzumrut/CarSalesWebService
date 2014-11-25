@@ -25,6 +25,7 @@ public interface IAutoDao {
 	public List<Auto> selectAll();
 	public Auto findById(int id);
 	public List<Auto> selectAutosName();
+	public void deleteAuto(int id);
 
 	/* AutoCategory */
 	public List<AutoCategory> selectAllCategory();
@@ -55,5 +56,8 @@ public interface IAutoDao {
 	
 	/* User */
 	public User findUserByName(String username);
+	
+	/* Search */
+	
 
 }

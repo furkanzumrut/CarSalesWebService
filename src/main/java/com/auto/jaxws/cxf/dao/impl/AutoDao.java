@@ -265,6 +265,16 @@ public class AutoDao implements IAutoDao{
 		return persons;
 	}
 
+	@Override
+	public void deleteAuto(int id) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Auto auto = (Auto) session.get(Auto.class, id);
+		session.delete(auto);
+		session.getTransaction().commit();	
+		
+	}
+
 
 
 }

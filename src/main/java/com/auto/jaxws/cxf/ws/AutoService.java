@@ -148,6 +148,11 @@ public class AutoService implements IAutoService {
 		return autoDao.selectAllTire();
 	}
 
+	@Override
+	public void deleteAutoById(Integer autoid) {
+		autoDao.deleteAuto(autoid);
+	}
+
 
 
 
