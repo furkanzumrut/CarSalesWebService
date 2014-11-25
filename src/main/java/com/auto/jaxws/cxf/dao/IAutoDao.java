@@ -59,5 +59,6 @@ public interface IAutoDao {
 	
 	/* Search */
 	
+	
 
 }

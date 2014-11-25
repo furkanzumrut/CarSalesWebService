@@ -153,6 +153,12 @@ public class AutoService implements IAutoService {
 		autoDao.deleteAuto(autoid);
 	}
 
+	@Override
+	public List<AutoSubCategory> getAllSubCategory() {
+		// TODO Auto-generated method stub
+		return autoDao.selectAllSubCategory();
+	}
+
 
 
 

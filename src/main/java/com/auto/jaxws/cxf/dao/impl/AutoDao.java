@@ -269,8 +269,11 @@ public class AutoDao implements IAutoDao{
 	public void deleteAuto(int id) {
 		Session session = getSessionFactory().getCurrentSession();
 		session.beginTransaction();
-		Auto auto = (Auto) session.get(Auto.class, id);
+		Query q = session.createQuery("from Auto where autoid = :autoid ");
+		q.setParameter("autoid", id);
+		Auto auto = (Auto)q.list().get(0);
 		session.delete(auto);
+		
 		session.getTransaction().commit();	
 		
 	}

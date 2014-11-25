@@ -20,6 +20,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.Cascade;
+
 @Entity
 @Table(name = "auto", catalog = "carsalesdb", schema = "public")
 public class Auto implements Serializable {
@@ -282,7 +284,7 @@ public class Auto implements Serializable {
 	public void setAutotire(AutoTire autotire) {
 		this.autotire = autotire;
 	}
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "auto")
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "auto",orphanRemoval = true)
 	public Set<AutoImage> getAutoimages() {
 		return autoimages;
 	}
