@@ -29,6 +29,7 @@ public interface IAutoService {
 	/* Auto */
 	public void addAuto(Auto auto);
 	public List<Auto> getAllAutos();
+	public List<Auto> getNotSoldAutos();
 	public Auto getAuto(Integer autoid);
 	public List<Auto> getAllAutosNames();
 	public void deleteAutoById(Integer autoid);

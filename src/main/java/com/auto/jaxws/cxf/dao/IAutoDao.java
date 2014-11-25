@@ -26,7 +26,7 @@ public interface IAutoDao {
 	public Auto findById(int id);
 	public List<Auto> selectAutosName();
 	public void deleteAuto(int id);
-
+	public List<Auto> selectNotSoldAuto();
 	/* AutoCategory */
 	public List<AutoCategory> selectAllCategory();
 	public void AutoCategoryInsert(AutoCategory autocategory);

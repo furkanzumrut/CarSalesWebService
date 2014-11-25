@@ -163,6 +163,12 @@ public class AutoService implements IAutoService {
 		return autoDao.selectAllSubCategory();
 	}
 
+	@Override
+	public List<Auto> getNotSoldAutos() {
+		// TODO Auto-generated method stub
+		return autoDao.selectNotSoldAuto();
+	}
+
 
 
 

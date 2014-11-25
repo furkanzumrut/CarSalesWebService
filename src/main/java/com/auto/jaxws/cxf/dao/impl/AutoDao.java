@@ -289,5 +289,18 @@ public class AutoDao implements IAutoDao{
 		return persons;
 	}
 
+	@Override
+	public List<Auto> selectNotSoldAuto() {
+		Session session = getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		
+
+		Query query = session.createQuery("SELECT a from Auto a, AutoSales b where sold <> 1 and a.autoid = b.autoid");
+		
+		
+		return query.list();
+	}
+
 
 }
