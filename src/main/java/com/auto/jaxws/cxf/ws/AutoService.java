@@ -169,6 +169,12 @@ public class AutoService implements IAutoService {
 		return autoDao.selectNotSoldAuto();
 	}
 
+	@Override
+	public Integer getAutoSubCategoryIdByName(String subcategoryname) {
+		// TODO Auto-generated method stub
+		return autoDao.findAutoSubCategoryIdByName(subcategoryname);
+	}
+
 
 
 

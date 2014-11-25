@@ -42,6 +42,7 @@ public interface IAutoService {
 	public void addAutoSubCategory(AutoSubCategory autosubcategory);
 	public List<AutoSubCategory> getAllSubCategoryByCategoryId(int categoryid);
 	public List<AutoSubCategory> getAllSubCategory();
+	public Integer getAutoSubCategoryIdByName(String subcategoryname);
 	
 	/* AutoImage */
 	public List<AutoImage> getAllImageByAutoId(Integer autoid);

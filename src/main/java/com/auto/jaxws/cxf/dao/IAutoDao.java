@@ -35,6 +35,7 @@ public interface IAutoDao {
 	public List<AutoSubCategory> selectAllSubCategory();
 	public List<AutoSubCategory> selectAllSubCategorybyCategoryId(int categoryid);
 	public void AutoSubCategoryInsert(AutoSubCategory autosubcategory);
+	public Integer findAutoSubCategoryIdByName(String subcategoryname);
 	
 	/* AutoImage */
 	public List<AutoImage> findImagesByAutoId(int id);

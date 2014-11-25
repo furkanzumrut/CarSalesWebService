@@ -302,5 +302,19 @@ public class AutoDao implements IAutoDao{
 		return query.list();
 	}
 
+	@Override
+	public Integer findAutoSubCategoryIdByName(String subcategoryname) {
+		Session session = getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		
+
+		Query query = session.createQuery("SELECT a.subcategoryid from AutoSubCategory a where subcategoryname = :subcategoryname");
+		query.setParameter("subcategoryname", subcategoryname);
+		
+		
+		return (Integer)query.list().get(0);
+	}
+
 
 }
