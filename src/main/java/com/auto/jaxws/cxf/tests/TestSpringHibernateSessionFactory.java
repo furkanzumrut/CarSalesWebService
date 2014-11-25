@@ -41,7 +41,7 @@ public class TestSpringHibernateSessionFactory {
 		// auto.setCarid(2);
 		
 		
-		AutoCategory autocategory = new AutoCategory("Volvo");
+		AutoCategory autocategory = new AutoCategory("Man");
 		autoService.addAutoCategory(autocategory);
 			// autoService.getAuto(1);
 			
