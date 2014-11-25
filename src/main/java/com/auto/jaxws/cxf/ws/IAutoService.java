@@ -39,7 +39,7 @@ public interface IAutoService {
 	
 	/* AutoSubCategory */
 	public void addAutoSubCategory(AutoSubCategory autosubcategory);
-	public List<AutoSubCategory> getAllSubCategory();
+	public List<AutoSubCategory> getAllSubCategoryByCategoryId(int categoryid);
 	
 	/* AutoImage */
 	public List<AutoImage> getAllImageByAutoId(Integer autoid);

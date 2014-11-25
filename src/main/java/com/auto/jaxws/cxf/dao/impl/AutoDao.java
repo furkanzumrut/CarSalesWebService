@@ -119,15 +119,14 @@ public class AutoDao implements IAutoDao{
 	}
 
 	@Override
-	public List<AutoSubCategory> selectAllSubCategory() {
+	public List<AutoSubCategory> selectAllSubCategorybyCategoryId(int categoryid) {
 		Session session = getSessionFactory().getCurrentSession();
 		session.beginTransaction();
-		Criteria criteria = session.createCriteria(AutoSubCategory.class);
 		
-		@SuppressWarnings("unchecked")
-		List<AutoSubCategory> persons = (List<AutoSubCategory>) criteria.list();
-		session.getTransaction().commit();
-		return persons;
+		
+		Query query = session.createQuery("SELECT a from AutoSubCategory a where categoryid = :categoryid");
+		query.setParameter("categoryid", categoryid);
+		return query.list();
 	}
 
 	@Override
