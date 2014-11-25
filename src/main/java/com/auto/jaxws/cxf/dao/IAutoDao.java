@@ -32,6 +32,7 @@ public interface IAutoDao {
 	public void AutoCategoryInsert(AutoCategory autocategory);
 
 	/* AutoSubCategory */
+	public List<AutoSubCategory> selectAllSubCategory();
 	public List<AutoSubCategory> selectAllSubCategorybyCategoryId(int categoryid);
 	public void AutoSubCategoryInsert(AutoSubCategory autosubcategory);
 	

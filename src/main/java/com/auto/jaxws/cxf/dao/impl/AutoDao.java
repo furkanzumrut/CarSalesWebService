@@ -277,6 +277,17 @@ public class AutoDao implements IAutoDao{
 		
 	}
 
+	@Override
+	public List<AutoSubCategory> selectAllSubCategory() {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(AutoSubCategory.class);
+		
+		@SuppressWarnings("unchecked")
+		List<AutoSubCategory> persons = (List<AutoSubCategory>) criteria.list();
+		session.getTransaction().commit();
+		return persons;
+	}
 
 
 }

@@ -155,8 +155,12 @@ public class AutoService implements IAutoService {
 
 	@Override
 	public List<AutoSubCategory> getAllSubCategoryByCategoryId(int categoryid) {
-		// TODO Auto-generated method stub
 		return autoDao.selectAllSubCategorybyCategoryId(categoryid);
+	}
+
+	@Override
+	public List<AutoSubCategory> getAllSubCategory() {
+		return autoDao.selectAllSubCategory();
 	}
 
 
