@@ -88,8 +88,6 @@
 				<value>com.auto.jaxws.cxf.model.AutoImage</value>
 				<value>com.auto.jaxws.cxf.model.AutoSubCategory</value>
 				<value>com.auto.jaxws.cxf.model.AutoTire</value>
-				<value>com.auto.jaxws.cxf.model.AutoColor</value>
-				<value>com.auto.jaxws.cxf.model.AutoType</value>
 				<value>com.auto.jaxws.cxf.model.Customer</value>
 				<value>com.auto.jaxws.cxf.model.User</value>
 			</list>
@@ -99,7 +97,7 @@
 				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
 				<!-- <prop key="hibernate.current_session_context_class">thread</prop> -->
 				<prop key="hibernate.enable_lazy_load_no_trans">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.c3p0.min_size">5</prop>
 				<prop key="hibernate.c3p0.max_size">10</prop>
 				<prop key="hibernate.c3p0.timeout">300</prop>
@@ -130,25 +128,25 @@
 
 
 
-<!-- 	<bean id="dataSource" -->
-<!-- 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
-<!-- 		<property name="driverClassName" value="org.postgresql.Driver" /> -->
-<!-- 		<property name="url" -->
-<!-- 			value="jdbc:postgresql://carsalesdb.ckbwbgfnwxca.eu-west-1.rds.amazonaws.com:5432/carsalesdb" /> -->
-<!-- 		<property name="username" value="awuser" /> -->
-<!-- 		<property name="password" value="fz199300" /> -->
-
-<!-- 	</bean> -->
-
 	<bean id="dataSource"
-	class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-	<property name="driverClassName" value="org.postgresql.Driver" />
-	<property name="url"
-	value="jdbc:postgresql://localhost:5432/carsalesdb" />
-	<property name="username" value="postgres" />
-	<property name="password" value="199300" />
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url"
+			value="jdbc:postgresql://carsalesdb.ckbwbgfnwxca.eu-west-1.rds.amazonaws.com:5432/carsalesdb" />
+		<property name="username" value="awuser" />
+		<property name="password" value="fz199300" />
 
 	</bean>
+
+	<!-- <bean id="dataSource" -->
+	<!-- class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+	<!-- <property name="driverClassName" value="org.postgresql.Driver" /> -->
+	<!-- <property name="url" -->
+	<!-- value="jdbc:postgresql://localhost:5432/carsalesdb" /> -->
+	<!-- <property name="username" value="postgres" /> -->
+	<!-- <property name="password" value="199300" /> -->
+
+	<!-- </bean> -->
 
 	<!-- references a spring bean -->
 	<!-- <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->

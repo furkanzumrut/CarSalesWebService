@@ -22,7 +22,5 @@
         <mapping class="com.auto.jaxws.cxf.model.Customer"/>
         <mapping class="com.auto.jaxws.cxf.model.AutoImage"/>
         <mapping class="com.auto.jaxws.cxf.model.User"/>
-        <mapping class="com.auto.jaxws.cxf.model.AutoType"/>
-        <mapping class="com.auto.jaxws.cxf.model.AutoColor"/>
     </session-factory>
 </hibernate-configuration>

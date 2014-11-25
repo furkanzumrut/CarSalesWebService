@@ -39,13 +39,7 @@ public interface IAutoService {
 	
 	/* AutoSubCategory */
 	public void addAutoSubCategory(AutoSubCategory autosubcategory);
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public List<AutoSubCategory> getAllSubCategoryByCategoryId(int categoryid);
-=======
->>>>>>> parent of c6f1029... selectAllSubCategory method @Update
-=======
->>>>>>> parent of c6f1029... selectAllSubCategory method @Update
 	public List<AutoSubCategory> getAllSubCategory();
 	
 	/* AutoImage */

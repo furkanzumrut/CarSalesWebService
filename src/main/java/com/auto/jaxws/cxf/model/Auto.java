@@ -33,11 +33,13 @@ public class Auto implements Serializable {
 	private Integer autoid;
 	private String autoname;
 	private Integer automodel;
-	private Double auto100km;	
+	private Double auto100km;
+	private Integer autocolor;
 	private Integer autokm;
 	private Integer autohp;
 	private Integer autohand;
 	private Date autoregisterdate;
+	private Integer autotype;
 	private Double autoprice;
 	private AutoSales autosales;
 	private AutoCategory autocategory;
@@ -47,8 +49,6 @@ public class Auto implements Serializable {
 	private AutoRim autorim;
 	private AutoSubCategory autosubcategory;
 	private AutoTire autotire;
-	private AutoType autotype;
-	private AutoColor autocolor;
 	private Set<AutoImage> autoimages = new HashSet<AutoImage>(
 			0);
 	
@@ -57,8 +57,8 @@ public class Auto implements Serializable {
 
 	
 	public Auto(String autoname, Integer automodel, Double auto100km,
-			AutoColor autocolor, Integer autokm, Integer autohp,
-			Integer autohand, Date autoregisterdate, AutoType autotype,
+			Integer autocolor, Integer autokm, Integer autohp,
+			Integer autohand, Date autoregisterdate, Integer autotype,
 			Double autoprice) {
 		super();
 		this.autoname = autoname;
@@ -75,8 +75,8 @@ public class Auto implements Serializable {
 
 
 	public Auto(String autoname, Integer automodel, Double auto100km,
-			AutoColor autocolor, Integer autokm, Integer autohp,
-			Integer autohand, Date autoregisterdate, AutoType autotype,
+			Integer autocolor, Integer autokm, Integer autohp,
+			Integer autohand, Date autoregisterdate, Integer autotype,
 			Double autoprice, AutoSales autosales, AutoCategory autocategory,
 			AutoFuel autofuel, AutoGear autogear, AutoInterrior autointerrior,
 			AutoRim autorim, AutoSubCategory autosubcategory,
@@ -142,7 +142,14 @@ public class Auto implements Serializable {
 		this.auto100km = auto100km;
 	}
 
+	@Column(name = "autocolor", nullable = false)
+	public Integer getAutocolor() {
+		return autocolor;
+	}
 
+	public void setAutocolor(Integer autocolor) {
+		this.autocolor = autocolor;
+	}
 
 	@Column(name = "autokm", nullable = false)
 	public Integer getAutokm() {
@@ -181,7 +188,14 @@ public class Auto implements Serializable {
 		this.autoregisterdate = autoregisterdate;
 	}
 
+	@Column(name = "autotype",nullable = false)
+	public Integer getAutotype() {
+		return autotype;
+	}
 
+	public void setAutotype(Integer autotype) {
+		this.autotype = autotype;
+	}
 
 	@Column(name = "autoprice",nullable = false)
 	public Double getAutoprice() {
@@ -212,16 +226,6 @@ public class Auto implements Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "autocolorid", nullable = false)
-	public AutoColor getAutoColor() {
-		return autocolor;
-	}
-
-	public void setAutoColor(AutoColor autocolor) {
-		this.autocolor = autocolor;
-	}
-	
-	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "autofuelid", nullable = false)
 	public AutoFuel getAutofuel() {
 		return autofuel;
@@ -241,17 +245,6 @@ public class Auto implements Serializable {
 		this.autogear = autogear;
 	}
 
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "autotypeid", nullable = false)
-	public AutoType getAutotype() {
-		return autotype;
-	}
-
-	public void setAutotype(AutoType autotype) {
-		this.autotype = autotype;
-	}	
-	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "autointerriorid", nullable = false)
 	public AutoInterrior getAutointerrior() {

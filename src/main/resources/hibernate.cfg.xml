@@ -3,25 +3,23 @@
 		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory name="autosession">
-		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		<property name="hibernate.connection.password">fz199300</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://carsalesdb.ckbwbgfnwxca.eu-west-1.rds.amazonaws.com:5432/carsalesdb</property>
-		<property name="hibernate.connection.username">awuser</property>
-		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-
-		<mapping class="com.auto.jaxws.cxf.model.Auto" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoCategory" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoFuel" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoGear" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoInterrior" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoRim" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoSales" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoSubCategory" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoTire" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoImage" />
-		<mapping class="com.auto.jaxws.cxf.model.Customer" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoType" />
-		<mapping class="com.auto.jaxws.cxf.model.AutoColor" />
-	</session-factory>
+    <session-factory name="autosession">
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">fz199300</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://carsalesdb.ckbwbgfnwxca.eu-west-1.rds.amazonaws.com:5432/carsalesdb</property>
+        <property name="hibernate.connection.username">awuser</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        
+        <mapping class="com.auto.jaxws.cxf.model.Auto"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoCategory"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoFuel"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoGear"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoInterrior"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoRim"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoSales"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoSubCategory"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoTire"/>
+        <mapping class="com.auto.jaxws.cxf.model.AutoImage"/>
+        <mapping class="com.auto.jaxws.cxf.model.Customer"/>
+    </session-factory>
 </hibernate-configuration>
