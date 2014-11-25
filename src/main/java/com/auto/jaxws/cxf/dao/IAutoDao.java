@@ -33,7 +33,10 @@ public interface IAutoDao {
 
 	/* AutoSubCategory */
 	public List<AutoSubCategory> selectAllSubCategory();
+<<<<<<< HEAD
 	public List<AutoSubCategory> selectAllSubCategorybyCategoryId(int categoryid);
+=======
+>>>>>>> parent of c6f1029... selectAllSubCategory method @Update
 	public void AutoSubCategoryInsert(AutoSubCategory autosubcategory);
 	
 	/* AutoImage */
