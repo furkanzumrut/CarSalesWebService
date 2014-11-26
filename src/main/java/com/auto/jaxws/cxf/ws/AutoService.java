@@ -181,6 +181,11 @@ public class AutoService implements IAutoService {
 		return autoDao.findAutoByName(autoname);
 	}
 
+	@Override
+	public void addAutoImage2(String autourl, int autoid) {
+		autoDao.AutoImageInsert2(autourl, autoid);
+	}
+
 
 
 

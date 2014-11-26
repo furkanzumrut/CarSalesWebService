@@ -327,5 +327,17 @@ public class AutoDao implements IAutoDao{
 		return (Integer)query.list().get(0);
 	}
 
+	@Override
+	public void AutoImageInsert2(String autourl, int autoid) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		String hql = "INSERT INTO AutoImage(:autourl, :autoid)"  + 
+	             "SELECT autourl,autoid FROM AutoImage";
+		Query query = session.createQuery(hql);
+		query.setParameter("autourl", autourl);
+		query.setParameter("autoid", autoid);
+		
+	}
+
 
 }

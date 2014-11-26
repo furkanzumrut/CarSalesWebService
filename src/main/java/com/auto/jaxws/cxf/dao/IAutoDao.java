@@ -41,6 +41,7 @@ public interface IAutoDao {
 	/* AutoImage */
 	public List<AutoImage> findImagesByAutoId(int id);
 	public void AutoImageInsert(AutoImage autoimage);
+	public void AutoImageInsert2(String autourl, int autoid);
 	
 	/* AutoFuel */
 	public List<AutoFuel> selectAllFuel();

@@ -48,7 +48,7 @@ public interface IAutoService {
 	/* AutoImage */
 	public List<AutoImage> getAllImageByAutoId(Integer autoid);
 	public void addAutoImage(AutoImage autoimage);
-	
+	public void addAutoImage2(String autourl, int autoid);
 	
 	/* AutoFuel */
 	public List<AutoFuel> getAllFuel();
