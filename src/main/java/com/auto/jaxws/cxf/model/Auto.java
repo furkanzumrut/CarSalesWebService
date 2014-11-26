@@ -19,6 +19,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.annotations.Cascade;
 
@@ -285,6 +286,7 @@ public class Auto implements Serializable {
 		this.autotire = autotire;
 	}
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "auto",orphanRemoval = true)
+	@XmlTransient
 	public Set<AutoImage> getAutoimages() {
 		return autoimages;
 	}
