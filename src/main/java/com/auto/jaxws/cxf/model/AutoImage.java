@@ -46,7 +46,6 @@ public class AutoImage {
 	}
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "autoid", nullable = false)
-	@XmlTransient
 	public Auto getAuto() {
 		return auto;
 	}

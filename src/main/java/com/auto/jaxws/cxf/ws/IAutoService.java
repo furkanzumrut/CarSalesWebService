@@ -48,6 +48,7 @@ public interface IAutoService {
 	public List<AutoImage> getAllImageByAutoId(Integer autoid);
 	public void addAutoImage(AutoImage autoimage);
 	
+	
 	/* AutoFuel */
 	public List<AutoFuel> getAllFuel();
 	

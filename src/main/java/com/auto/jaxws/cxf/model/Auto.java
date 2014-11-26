@@ -52,7 +52,7 @@ public class Auto implements Serializable {
 	private Set<AutoImage> autoimages = new HashSet<AutoImage>(
 			0);
 	
-	protected Auto() {
+	public Auto() {
 	}
 
 	
