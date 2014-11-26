@@ -182,8 +182,14 @@ public class AutoService implements IAutoService {
 	}
 
 	@Override
-	public void addAutoImage2(String autourl, int autoid) {
-		autoDao.AutoImageInsert2(autourl, autoid);
+	public void addAutoImage2(int autoimageid, String autourl, int autoid) {
+		autoDao.AutoImageInsert2(autoimageid, autourl, autoid);
+	}
+
+	@Override
+	public void updateAuto(Auto auto) {
+		autoDao.update(auto);
+		
 	}
 
 

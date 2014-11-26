@@ -22,6 +22,11 @@ public class AutoImage {
 		
 	}
 	
+	public AutoImage(String autourl, Auto auto){
+		super();
+		this.autourl = autourl;
+		this.auto = auto;
+	}
 	public AutoImage(Integer autoimageid, String autourl, Auto auto) {
 		super();
 		this.autoimageid = autoimageid;

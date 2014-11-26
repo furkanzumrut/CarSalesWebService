@@ -22,6 +22,7 @@ public interface IAutoDao {
 
 	/* Auto */
 	public void insert(Auto auto);
+	public void update(Auto auto);
 	public List<Auto> selectAll();
 	public Auto findById(int id);
 	public Integer findAutoByName(String autoname);
@@ -41,7 +42,7 @@ public interface IAutoDao {
 	/* AutoImage */
 	public List<AutoImage> findImagesByAutoId(int id);
 	public void AutoImageInsert(AutoImage autoimage);
-	public void AutoImageInsert2(String autourl, int autoid);
+	public void AutoImageInsert2(int autoimageid,String autourl, int autoid);
 	
 	/* AutoFuel */
 	public List<AutoFuel> selectAllFuel();

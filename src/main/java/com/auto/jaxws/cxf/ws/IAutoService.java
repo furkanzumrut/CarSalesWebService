@@ -31,6 +31,7 @@ public interface IAutoService {
 	public List<Auto> getAllAutos();
 	public List<Auto> getNotSoldAutos();
 	public Auto getAuto(Integer autoid);
+	public void updateAuto(Auto auto);
 	public Integer getAutoIdByName(String autoname);
 	public List<Auto> getAllAutosNames();
 	public void deleteAutoById(Integer autoid);
@@ -48,7 +49,7 @@ public interface IAutoService {
 	/* AutoImage */
 	public List<AutoImage> getAllImageByAutoId(Integer autoid);
 	public void addAutoImage(AutoImage autoimage);
-	public void addAutoImage2(String autourl, int autoid);
+	public void addAutoImage2(int autoimageid, String autourl, int autoid);
 	
 	/* AutoFuel */
 	public List<AutoFuel> getAllFuel();
