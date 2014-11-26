@@ -31,6 +31,7 @@ public interface IAutoService {
 	public List<Auto> getAllAutos();
 	public List<Auto> getNotSoldAutos();
 	public Auto getAuto(Integer autoid);
+	public Integer getAutoIdByName(String autoname);
 	public List<Auto> getAllAutosNames();
 	public void deleteAutoById(Integer autoid);
 	

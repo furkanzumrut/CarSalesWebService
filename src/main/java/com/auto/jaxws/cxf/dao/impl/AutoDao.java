@@ -316,5 +316,16 @@ public class AutoDao implements IAutoDao{
 		return (Integer)query.list().get(0);
 	}
 
+	@Override
+	public Integer findAutoByName(String autoname) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Query query = session.createQuery("SELECT a.autoid from Auto a where autoname = :autoname");
+		query.setParameter("autoname", autoname);
+		
+		
+		return (Integer)query.list().get(0);
+	}
+
 
 }

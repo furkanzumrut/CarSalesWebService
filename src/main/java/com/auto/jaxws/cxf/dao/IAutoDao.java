@@ -24,6 +24,7 @@ public interface IAutoDao {
 	public void insert(Auto auto);
 	public List<Auto> selectAll();
 	public Auto findById(int id);
+	public Integer findAutoByName(String autoname);
 	public List<Auto> selectAutosName();
 	public void deleteAuto(int id);
 	public List<Auto> selectNotSoldAuto();
