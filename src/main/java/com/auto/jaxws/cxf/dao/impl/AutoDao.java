@@ -349,5 +349,240 @@ public class AutoDao implements IAutoDao{
 		
 	}
 
+	@Override
+	@Transactional
+	public void AutoFuelInsert(AutoFuel autofuel) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(autofuel);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoGearInsert(AutoGear autogear) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(autogear);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoInterriorInsert(AutoInterrior autointerrior) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(autointerrior);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoRimInsert(AutoRim autorim) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(autorim);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoTireInsert(AutoTire autotire) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(autotire);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void UserInsert(User user) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(user);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoCategoryUpdate(AutoCategory autocategory) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.update(autocategory);
+		session.getTransaction().commit();
+	}
+
+	@Override
+	@Transactional
+	public void AutoSubCategoryUpdate(AutoSubCategory autosubcategory) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.update(autosubcategory);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoFuelUpdate(AutoFuel autofuel) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.update(autofuel);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoGearUpdate(AutoGear autogear) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.update(autogear);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoInterriorUpdate(AutoInterrior autointerrior) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.update(autointerrior);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoRimUpdate(AutoRim autorim) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.update(autorim);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void AutoTireUpdate(AutoTire autotire) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.update(autotire);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	@Transactional
+	public void UserUpdate(User user) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.update(user);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	public void deleteAutoCategory(int autocategoryid) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Query q = session.createQuery("from AutoCategory where autocategoryid = :autocategoryid ");
+		q.setParameter("autocategoryid", autocategoryid);
+		AutoCategory autocategory = (AutoCategory)q.list().get(0);
+		session.delete(autocategory);
+		session.getTransaction().commit();	
+		
+	}
+
+	@Override
+	public void deleteAutoSubCategory(int autosubcategoryid) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Query q = session.createQuery("from AutoSubCategory where autosubcategoryid = :autosubcategoryid ");
+		q.setParameter("autosubcategoryid", autosubcategoryid);
+		AutoSubCategory autosubcategory = (AutoSubCategory)q.list().get(0);
+		session.delete(autosubcategory);
+		session.getTransaction().commit();	
+		
+	}
+
+	@Override
+	public void deleteAutoFuel(int autofuelid) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Query q = session.createQuery("from AutoFuel where autofuelid = :autofuelid ");
+		q.setParameter("autofuelid", autofuelid);
+		AutoFuel autofuel = (AutoFuel)q.list().get(0);
+		session.delete(autofuel);
+		session.getTransaction().commit();	
+		
+	}
+
+	@Override
+	public void deleteAutoGear(int autogearid) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Query q = session.createQuery("from AutoGear where autogearid = :autogearid ");
+		q.setParameter("autogearid", autogearid);
+		AutoGear autogear = (AutoGear)q.list().get(0);
+		session.delete(autogear);
+		session.getTransaction().commit();	
+		
+	}
+
+	@Override
+	public void deleteAutoInterrior(int autointerriorid) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Query q = session.createQuery("from AutoInterrior where autointerriorid = :autointerriorid ");
+		q.setParameter("autointerriorid", autointerriorid);
+		AutoInterrior autointerrior = (AutoInterrior)q.list().get(0);
+		session.delete(autointerrior);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	public void deleteAutoRim(int autorimid) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Query q = session.createQuery("from AutoRim where autorimid = :autorimid ");
+		q.setParameter("autorimid", autorimid);
+		AutoRim autorim = (AutoRim)q.list().get(0);
+		session.delete(autorim);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	public void deleteAutoTire(int autotireid) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Query q = session.createQuery("from AutoTire where autotireid = :autotireid ");
+		q.setParameter("autotireid", autotireid);
+		AutoTire autotire = (AutoTire)q.list().get(0);
+		session.delete(autotire);
+		session.getTransaction().commit();
+		
+	}
+
+	@Override
+	public void deleteUser(int userid) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Query q = session.createQuery("from User where userid = :userid ");
+		q.setParameter("userid", userid);
+		User user = (User)q.list().get(0);
+		session.delete(user);
+		session.getTransaction().commit();
+		
+	}
+
 
 }

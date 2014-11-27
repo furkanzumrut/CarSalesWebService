@@ -192,6 +192,138 @@ public class AutoService implements IAutoService {
 		
 	}
 
+	@Override
+	public void addAutoFuel(AutoFuel autofuel) {
+		autoDao.AutoFuelInsert(autofuel);
+		
+	}
+
+	@Override
+	public void addAutoGear(AutoGear autogear) {
+		autoDao.AutoGearInsert(autogear);
+		
+	}
+
+	@Override
+	public void addAutoInterrior(AutoInterrior autointerrior) {
+		autoDao.AutoInterriorInsert(autointerrior);
+		
+	}
+
+	@Override
+	public void addAutoRim(AutoRim autorim) {
+		autoDao.AutoRimInsert(autorim);
+		
+	}
+
+	@Override
+	public void addAutoTire(AutoTire autotire) {
+		autoDao.AutoTireInsert(autotire);
+		
+	}
+
+	@Override
+	public void addAutoUser(User user) {
+		autoDao.UserInsert(user);
+		
+	}
+
+	@Override
+	public void updateAutoCategory(AutoCategory autocategory) {
+		autoDao.AutoCategoryUpdate(autocategory);
+		
+	}
+
+	@Override
+	public void deleteAutoCategoryById(Integer autocategoryid) {
+		autoDao.deleteAutoCategory(autocategoryid);
+		
+	}
+
+	@Override
+	public void updateAutoSubCategory(AutoSubCategory autosubcategory) {
+		autoDao.AutoSubCategoryUpdate(autosubcategory);
+		
+	}
+
+	@Override
+	public void deleteAutoSubCategoryById(Integer autosubcategoryid) {
+		autoDao.deleteAutoSubCategory(autosubcategoryid);
+		
+	}
+
+	@Override
+	public void updateAutoFuel(AutoFuel autofuel) {
+		autoDao.AutoFuelUpdate(autofuel);
+		
+	}
+
+	@Override
+	public void deleteAutoFuelById(Integer autofuelid) {
+		autoDao.deleteAutoFuel(autofuelid);
+		
+	}
+
+	@Override
+	public void updateAutoGear(AutoGear autogear) {
+		autoDao.AutoGearUpdate(autogear);
+		
+	}
+
+	@Override
+	public void deleteAutoGearById(Integer autogearid) {
+		autoDao.deleteAutoGear(autogearid);
+		
+	}
+
+	@Override
+	public void updateAutoInterrior(AutoInterrior autointerrior) {
+		autoDao.AutoInterriorUpdate(autointerrior);
+		
+	}
+
+	@Override
+	public void deleteAutoInterriorById(Integer autointerriorid) {
+		autoDao.deleteAutoInterrior(autointerriorid);
+		
+	}
+
+	@Override
+	public void updateAutoRim(AutoRim autorim) {
+		autoDao.AutoRimUpdate(autorim);
+		
+	}
+
+	@Override
+	public void deleteAutoRimById(Integer autorimid) {
+		autoDao.deleteAutoRim(autorimid);
+		
+	}
+
+	@Override
+	public void updateAutoTire(AutoTire autotire) {
+		autoDao.AutoTireUpdate(autotire);
+		
+	}
+
+	@Override
+	public void deleteAutoTireById(Integer autotireid) {
+		autoDao.deleteAutoTire(autotireid);
+		
+	}
+
+	@Override
+	public void updateUser(User user) {
+		autoDao.UserUpdate(user);
+		
+	}
+
+	@Override
+	public void deleteUserById(Integer userid) {
+		autoDao.deleteUser(userid);
+		
+	}
+
 
 
 

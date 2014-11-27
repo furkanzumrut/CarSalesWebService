@@ -39,12 +39,16 @@ public interface IAutoService {
 	/* AutoCategory */
 	public List<AutoCategory> getAllCategory();
 	public void addAutoCategory(AutoCategory autocategory);
+	public void updateAutoCategory(AutoCategory autocategory);
+	public void deleteAutoCategoryById(Integer autocategoryid);
 	
 	/* AutoSubCategory */
 	public void addAutoSubCategory(AutoSubCategory autosubcategory);
 	public List<AutoSubCategory> getAllSubCategoryByCategoryId(int categoryid);
 	public List<AutoSubCategory> getAllSubCategory();
 	public Integer getAutoSubCategoryIdByName(String subcategoryname);
+	public void updateAutoSubCategory(AutoSubCategory autosubcategory);
+	public void deleteAutoSubCategoryById(Integer autosubcategoryid);
 	
 	/* AutoImage */
 	public List<AutoImage> getAllImageByAutoId(Integer autoid);
@@ -53,21 +57,39 @@ public interface IAutoService {
 	
 	/* AutoFuel */
 	public List<AutoFuel> getAllFuel();
+	public void addAutoFuel(AutoFuel autofuel);
+	public void updateAutoFuel(AutoFuel autofuel);
+	public void deleteAutoFuelById(Integer autofuelid);
 	
 	/* AutoGear */
 	public List<AutoGear> getAllGear();
+	public void addAutoGear(AutoGear autogear);
+	public void updateAutoGear(AutoGear autogear);
+	public void deleteAutoGearById(Integer autogearid);
 	
 	/* AutoInterrior */
 	public List<AutoInterrior> getAllInterrior();
+	public void addAutoInterrior(AutoInterrior autointerrior);
+	public void updateAutoInterrior(AutoInterrior autointerrior);
+	public void deleteAutoInterriorById(Integer autointerriorid);
 	
 	/* AutoRim */
 	public List<AutoRim> getAllAutoRim();
+	public void addAutoRim(AutoRim autorim);
+	public void updateAutoRim(AutoRim autorim);
+	public void deleteAutoRimById(Integer autorimid);
 	
 	/* AutoTire */
 	public List<AutoTire> getAllTire();
+	public void addAutoTire(AutoTire autotire);
+	public void updateAutoTire(AutoTire autotire);
+	public void deleteAutoTireById(Integer autotireid);
 	
 	/* User */
 	public User getUser(String username);
+	public void addAutoUser(User user);
+	public void updateUser(User user);
+	public void deleteUserById(Integer userid);
 
 	/* Other */
 	public String getReturnWork();
