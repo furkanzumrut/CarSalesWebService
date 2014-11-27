@@ -335,6 +335,12 @@ public class AutoService implements IAutoService {
 		return autoDao.findAutoTireIdByName(autotirename);
 	}
 
+	@Override
+	public Integer getAutoRimIdByName(String autorimname) {
+		// TODO Auto-generated method stub
+		return autoDao.findAutoRimIdByName(autorimname);
+	}
+
 
 
 

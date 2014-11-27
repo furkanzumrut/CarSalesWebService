@@ -612,5 +612,19 @@ public class AutoDao implements IAutoDao{
 		return (Integer)query.list().get(0);
 	}
 
+	@Override
+	public Integer findAutoRimIdByName(String autorimname) {
+		Session session = getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		
+
+		Query query = session.createQuery("SELECT a.autorimid from AutoRim a where autorimname = :autorimname");
+		query.setParameter("autorimname", autorimname);
+		
+		
+		return (Integer)query.list().get(0);
+	}
+
 
 }

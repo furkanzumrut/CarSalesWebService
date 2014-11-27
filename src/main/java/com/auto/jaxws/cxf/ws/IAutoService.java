@@ -79,6 +79,7 @@ public interface IAutoService {
 	public void addAutoRim(AutoRim autorim);
 	public void updateAutoRim(AutoRim autorim);
 	public void deleteAutoRimById(Integer autorimid);
+	public Integer getAutoRimIdByName(String autorimname);
 	
 	/* AutoTire */
 	public List<AutoTire> getAllTire();

@@ -74,6 +74,7 @@ public interface IAutoDao {
 	public void AutoRimInsert(AutoRim autorim);
 	public void AutoRimUpdate(AutoRim autorim);
 	public void deleteAutoRim(int autorimid);
+	public Integer findAutoRimIdByName(String autorimname);
 	
 	/* AutoTire */
 	public List<AutoTire> selectAllTire();
