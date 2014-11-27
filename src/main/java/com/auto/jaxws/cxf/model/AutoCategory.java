@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
 @Table(name = "autocategory", catalog = "carsalesdb", schema = "public")
@@ -26,7 +27,8 @@ public class AutoCategory implements Serializable {
 	private String categoryname;
 	
 	private Set<Auto> autos = new HashSet<Auto>(0);
-
+	private Set<AutoSubCategory> autosubcategory = new HashSet<AutoSubCategory>(
+			0);
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "categoryid", unique = true, nullable = false)
@@ -64,8 +66,14 @@ public class AutoCategory implements Serializable {
 	public void setCategoryname(String categoryname) {
 		this.categoryname = categoryname;
 	}
-
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "autocategory",orphanRemoval = true)
+	
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "autosubcategory",orphanRemoval = true)
+	@XmlTransient
+	public Set<AutoSubCategory> getAutoSubCategory() {
+		return autosubcategory;
+	}
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autocategory")
 	private Set<Auto> getAutos() {
 		return autos;
 	}
