@@ -67,10 +67,14 @@ public class AutoCategory implements Serializable {
 		this.categoryname = categoryname;
 	}
 	
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "autosubcategory",orphanRemoval = true)
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "autocategory",orphanRemoval = true)
 	@XmlTransient
 	public Set<AutoSubCategory> getAutoSubCategory() {
 		return autosubcategory;
+	}
+	
+	public void setAutoSubCategory(Set<AutoSubCategory> autosubcategory) {
+		this.autosubcategory = autosubcategory;
 	}
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autocategory")
