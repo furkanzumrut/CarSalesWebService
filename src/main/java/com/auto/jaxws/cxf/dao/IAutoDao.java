@@ -35,6 +35,7 @@ public interface IAutoDao {
 	public void AutoCategoryInsert(AutoCategory autocategory);
 	public void AutoCategoryUpdate(AutoCategory autocategory);
 	public void deleteAutoCategory(int autocategoryid);
+	public Integer findAutoCategoryIdByName(String autocategoryname);
 	
 	/* AutoSubCategory */
 	public List<AutoSubCategory> selectAllSubCategory();

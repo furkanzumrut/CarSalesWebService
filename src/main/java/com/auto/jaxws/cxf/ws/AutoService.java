@@ -324,6 +324,11 @@ public class AutoService implements IAutoService {
 		
 	}
 
+	@Override
+	public Integer getAutoCategoryIdByName(String autocategoryname) {
+		return autoDao.findAutoCategoryIdByName(autocategoryname);
+	}
+
 
 
 

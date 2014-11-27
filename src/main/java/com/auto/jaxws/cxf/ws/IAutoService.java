@@ -41,6 +41,7 @@ public interface IAutoService {
 	public void addAutoCategory(AutoCategory autocategory);
 	public void updateAutoCategory(AutoCategory autocategory);
 	public void deleteAutoCategoryById(Integer autocategoryid);
+	public Integer getAutoCategoryIdByName(String autocategoryname);
 	
 	/* AutoSubCategory */
 	public void addAutoSubCategory(AutoSubCategory autosubcategory);

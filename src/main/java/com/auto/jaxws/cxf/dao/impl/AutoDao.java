@@ -584,5 +584,19 @@ public class AutoDao implements IAutoDao{
 		
 	}
 
+	@Override
+	public Integer findAutoCategoryIdByName(String autocategoryname) {
+		Session session = getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		
+
+		Query query = session.createQuery("SELECT a.autocategoryid from AutoCategory a where autocategoryname = :autocategoryname");
+		query.setParameter("autocategoryname", autocategoryname);
+		
+		
+		return (Integer)query.list().get(0);
+	}
+
 
 }
