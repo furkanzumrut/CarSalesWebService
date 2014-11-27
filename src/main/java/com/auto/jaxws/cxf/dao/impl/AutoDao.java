@@ -492,7 +492,7 @@ public class AutoDao implements IAutoDao{
 	public void deleteAutoCategory(int autocategoryid) {
 		Session session = getSessionFactory().getCurrentSession();
 		session.beginTransaction();
-		Query q = session.createQuery("from AutoCategory where autocategoryid = :autocategoryid ");
+		Query q = session.createQuery("from AutoCategory where categoryid = :autocategoryid ");
 		q.setParameter("autocategoryid", autocategoryid);
 		AutoCategory autocategory = (AutoCategory)q.list().get(0);
 		session.delete(autocategory);
@@ -504,7 +504,7 @@ public class AutoDao implements IAutoDao{
 	public void deleteAutoSubCategory(int autosubcategoryid) {
 		Session session = getSessionFactory().getCurrentSession();
 		session.beginTransaction();
-		Query q = session.createQuery("from AutoSubCategory where autosubcategoryid = :autosubcategoryid ");
+		Query q = session.createQuery("from AutoSubCategory where subcategoryid = :autosubcategoryid ");
 		q.setParameter("autosubcategoryid", autosubcategoryid);
 		AutoSubCategory autosubcategory = (AutoSubCategory)q.list().get(0);
 		session.delete(autosubcategory);
