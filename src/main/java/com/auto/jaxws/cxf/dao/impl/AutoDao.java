@@ -633,7 +633,7 @@ public class AutoDao implements IAutoDao{
 		session.beginTransaction();
 		
 
-		Query query = session.createQuery("SELECT a.autofuelid from AutoFuel a where autofuelname = :autofuelname");
+		Query query = session.createQuery("SELECT a.autofueldid from AutoFuel a where autofuelname = :autofuelname");
 		query.setParameter("autofuelname", autofuelname);
 		
 		
