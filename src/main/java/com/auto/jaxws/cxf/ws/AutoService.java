@@ -329,6 +329,12 @@ public class AutoService implements IAutoService {
 		return autoDao.findAutoCategoryIdByName(autocategoryname);
 	}
 
+	@Override
+	public Integer getAutoTireIdByName(String autotirename) {
+		// TODO Auto-generated method stub
+		return autoDao.findAutoTireIdByName(autotirename);
+	}
+
 
 
 

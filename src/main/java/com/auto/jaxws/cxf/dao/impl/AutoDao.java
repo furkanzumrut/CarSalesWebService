@@ -598,5 +598,19 @@ public class AutoDao implements IAutoDao{
 		return (Integer)query.list().get(0);
 	}
 
+	@Override
+	public Integer findAutoTireIdByName(String autotirename) {
+		Session session = getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		
+
+		Query query = session.createQuery("SELECT a.autotireid from AutoTire a where autotirename = :autotirename");
+		query.setParameter("autotirename", autotirename);
+		
+		
+		return (Integer)query.list().get(0);
+	}
+
 
 }

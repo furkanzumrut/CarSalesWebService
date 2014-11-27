@@ -80,6 +80,7 @@ public interface IAutoDao {
 	public void AutoTireInsert(AutoTire autotire);
 	public void AutoTireUpdate(AutoTire autotire);
 	public void deleteAutoTire(int autotireid);
+	public Integer findAutoTireIdByName(String autotirename);
 	
 	/* User */
 	public User findUserByName(String username);

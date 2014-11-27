@@ -85,6 +85,7 @@ public interface IAutoService {
 	public void addAutoTire(AutoTire autotire);
 	public void updateAutoTire(AutoTire autotire);
 	public void deleteAutoTireById(Integer autotireid);
+	public Integer getAutoTireIdByName(String autotirename);
 	
 	/* User */
 	public User getUser(String username);
