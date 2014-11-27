@@ -591,8 +591,8 @@ public class AutoDao implements IAutoDao{
 		session.beginTransaction();
 		
 
-		Query query = session.createQuery("SELECT a.autocategoryid from AutoCategory a where autocategoryname = :autocategoryname");
-		query.setParameter("autocategoryname", autocategoryname);
+		Query query = session.createQuery("SELECT a.autocategoryid from AutoCategory a where autocategoryname = :b");
+		query.setParameter("b", autocategoryname);
 		
 		
 		return (Integer)query.list().get(0);
