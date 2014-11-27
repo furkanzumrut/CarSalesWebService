@@ -56,6 +56,7 @@ public interface IAutoDao {
 	public void AutoFuelInsert(AutoFuel autofuel);
 	public void AutoFuelUpdate(AutoFuel autofuel);
 	public void deleteAutoFuel(int autofuelid);
+	public Integer findAutoFuelIdByName(String autofuelname);
 	
 	/* AutoGear */
 	public List<AutoGear> selectAllGear();

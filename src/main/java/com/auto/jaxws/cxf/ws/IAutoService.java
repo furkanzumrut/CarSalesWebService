@@ -80,6 +80,7 @@ public interface IAutoService {
 	public void updateAutoRim(AutoRim autorim);
 	public void deleteAutoRimById(Integer autorimid);
 	public Integer getAutoRimIdByName(String autorimname);
+	public Integer getAutoFuelIdByName(String autofuelname);
 	
 	/* AutoTire */
 	public List<AutoTire> getAllTire();

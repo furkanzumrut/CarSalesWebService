@@ -341,6 +341,12 @@ public class AutoService implements IAutoService {
 		return autoDao.findAutoRimIdByName(autorimname);
 	}
 
+	@Override
+	public Integer getAutoFuelIdByName(String autofuelname) {
+		// TODO Auto-generated method stub
+		return autoDao.findAutoFuelIdByName(autofuelname);
+	}
+
 
 
 
