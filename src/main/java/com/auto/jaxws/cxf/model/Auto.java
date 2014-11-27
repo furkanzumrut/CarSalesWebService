@@ -42,7 +42,6 @@ public class Auto implements Serializable {
 	private Date autoregisterdate;
 	private Integer autotype;
 	private Double autoprice;
-	private AutoSales autosales;
 	private AutoCategory autocategory;
 	private AutoFuel autofuel;
 	private AutoGear autogear;
@@ -78,7 +77,7 @@ public class Auto implements Serializable {
 	public Auto(String autoname, Integer automodel, Double auto100km,
 			Integer autocolor, Integer autokm, Integer autohp,
 			Integer autohand, Date autoregisterdate, Integer autotype,
-			Double autoprice, AutoSales autosales, AutoCategory autocategory,
+			Double autoprice, AutoCategory autocategory,
 			AutoFuel autofuel, AutoGear autogear, AutoInterrior autointerrior,
 			AutoRim autorim, AutoSubCategory autosubcategory,
 			AutoTire autotire) {
@@ -93,7 +92,6 @@ public class Auto implements Serializable {
 		this.autoregisterdate = autoregisterdate;
 		this.autotype = autotype;
 		this.autoprice = autoprice;
-		this.autosales = autosales;
 		this.autocategory = autocategory;
 		this.autofuel = autofuel;
 		this.autogear = autogear;
@@ -207,14 +205,7 @@ public class Auto implements Serializable {
 		this.autoprice = autoprice;
 	}
 
-	@OneToOne(fetch = FetchType.LAZY, mappedBy = "auto", cascade = CascadeType.ALL)
-	public AutoSales getAutosales() {
-		return autosales;
-	}
 
-	public void setAutosales(AutoSales autosales) {
-		this.autosales = autosales;
-	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "categoryid", nullable = false)
