@@ -61,6 +61,7 @@ public interface IAutoService {
 	public void addAutoFuel(AutoFuel autofuel);
 	public void updateAutoFuel(AutoFuel autofuel);
 	public void deleteAutoFuelById(Integer autofuelid);
+	public Integer getAutoFuelIdByName(String autofuelname);
 	
 	/* AutoGear */
 	public List<AutoGear> getAllGear();
@@ -80,7 +81,7 @@ public interface IAutoService {
 	public void updateAutoRim(AutoRim autorim);
 	public void deleteAutoRimById(Integer autorimid);
 	public Integer getAutoRimIdByName(String autorimname);
-	public Integer getAutoFuelIdByName(String autofuelname);
+	
 	
 	/* AutoTire */
 	public List<AutoTire> getAllTire();
