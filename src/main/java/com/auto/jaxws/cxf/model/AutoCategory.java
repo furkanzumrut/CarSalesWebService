@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -64,7 +65,7 @@ public class AutoCategory implements Serializable {
 		this.categoryname = categoryname;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "autocategory")
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "autocategory",orphanRemoval = true)
 	private Set<Auto> getAutos() {
 		return autos;
 	}
