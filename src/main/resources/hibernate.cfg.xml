@@ -16,10 +16,8 @@
         <mapping class="com.auto.jaxws.cxf.model.AutoGear"/>
         <mapping class="com.auto.jaxws.cxf.model.AutoInterrior"/>
         <mapping class="com.auto.jaxws.cxf.model.AutoRim"/>
-        <mapping class="com.auto.jaxws.cxf.model.AutoSales"/>
         <mapping class="com.auto.jaxws.cxf.model.AutoSubCategory"/>
         <mapping class="com.auto.jaxws.cxf.model.AutoTire"/>
         <mapping class="com.auto.jaxws.cxf.model.AutoImage"/>
-        <mapping class="com.auto.jaxws.cxf.model.Customer"/>
     </session-factory>
 </hibernate-configuration>

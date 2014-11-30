@@ -84,11 +84,9 @@
 				<value>com.auto.jaxws.cxf.model.AutoGear</value>
 				<value>com.auto.jaxws.cxf.model.AutoInterrior</value>
 				<value>com.auto.jaxws.cxf.model.AutoRim</value>
-				<value>com.auto.jaxws.cxf.model.AutoSales</value>
 				<value>com.auto.jaxws.cxf.model.AutoImage</value>
 				<value>com.auto.jaxws.cxf.model.AutoSubCategory</value>
 				<value>com.auto.jaxws.cxf.model.AutoTire</value>
-				<value>com.auto.jaxws.cxf.model.Customer</value>
 				<value>com.auto.jaxws.cxf.model.User</value>
 			</list>
 		</property>
@@ -105,6 +103,9 @@
 				<prop key="hibernate.c3p0.idle_test_period">3000</prop>
 				<prop key="hibernate.cache.use_second_level_cache">true</prop>
 				<prop key="hibernate.cache.use_query_cache">true</prop>
+<!-- 				<prop key="show_sql">true</prop> -->
+<!-- 				<prop key="format_sql">true</prop> -->
+<!-- 				<prop key="use_sql_comments">true</prop> -->
 				<prop key="hibernate.cache.provider_class">net.sf.ehcache.hibernate.SingletonEhCacheProvider
 				</prop>
 				<prop key="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</prop>
@@ -138,15 +139,15 @@
 
 	</bean>
 
-	<!-- <bean id="dataSource" -->
-	<!-- class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
-	<!-- <property name="driverClassName" value="org.postgresql.Driver" /> -->
-	<!-- <property name="url" -->
-	<!-- value="jdbc:postgresql://localhost:5432/carsalesdb" /> -->
-	<!-- <property name="username" value="postgres" /> -->
-	<!-- <property name="password" value="199300" /> -->
+<!-- 	<bean id="dataSource" -->
+<!-- 	class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+<!-- 	<property name="driverClassName" value="org.postgresql.Driver" /> -->
+<!-- 	<property name="url" -->
+<!-- 	value="jdbc:postgresql://localhost:5432/carsalesdb" /> -->
+<!-- 	<property name="username" value="postgres" /> -->
+<!-- 	<property name="password" value="199300" /> -->
 
-	<!-- </bean> -->
+<!-- 	</bean> -->
 
 	<!-- references a spring bean -->
 	<!-- <bean id="teamService" class="com.danielme.demo.jaxws.cxf.ws.TeamService"/> -->

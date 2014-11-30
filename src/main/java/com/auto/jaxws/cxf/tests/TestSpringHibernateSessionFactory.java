@@ -51,8 +51,8 @@ public class TestSpringHibernateSessionFactory {
 		// auto.setCarid(2);
 		
 		
-		Auto a = new Auto();
-		a.setAutoid(1);
+//		Auto a = new Auto();
+//		a.setAutoid(1);
 //		a.setAuto100km(11.2);
 //		a.setAutocategory(new AutoCategory(1));
 //		a.setAutocolor(1);
@@ -70,11 +70,11 @@ public class TestSpringHibernateSessionFactory {
 //		a.setAutosubcategory(new AutoSubCategory(1));
 //		a.setAutotire(new AutoTire(1));
 //		a.setAutotype(1);
-//		autoService.addAuto(a);
 		
-		AutoImage autoimage = new AutoImage("test", a);
+		
+		
 		try{
-		autoService.addAutoImage(autoimage);
+			//autoService.addAuto(a);
 		}catch (JDBCException jdbce) {
 		    jdbce.getSQLException().getNextException().printStackTrace();
 		}
