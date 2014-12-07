@@ -36,7 +36,7 @@
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
 		<property name="username" value="noreplycustomgarage@gmail.com" />
-		<property name="password" value="fz199300" />
+		<property name="password" value="******" />
 
 		<property name="javaMailProperties">
 			<props>
@@ -133,9 +133,9 @@
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url"
-			value="jdbc:postgresql://carsalesdb.ckbwbgfnwxca.eu-west-1.rds.amazonaws.com:5432/carsalesdb" />
-		<property name="username" value="awuser" />
-		<property name="password" value="fz199300" />
+			value="jdbc:postgresql://*****" />
+		<property name="username" value="*****" />
+		<property name="password" value="****" />
 
 	</bean>
 
@@ -145,7 +145,7 @@
 <!-- 	<property name="url" -->
 <!-- 	value="jdbc:postgresql://localhost:5432/carsalesdb" /> -->
 <!-- 	<property name="username" value="postgres" /> -->
-<!-- 	<property name="password" value="199300" /> -->
+<!-- 	<property name="password" value="*****" /> -->
 
 <!-- 	</bean> -->
 
