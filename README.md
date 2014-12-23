@@ -5,3 +5,5 @@ Spring Framework
 Hibernate
 Apache CXF
 PostgreSQL
+
+http://www.furkanzumrut.com/soap-project-carsaleswebservice-source-code-apache-cxf
